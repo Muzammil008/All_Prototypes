@@ -1,0 +1,29 @@
+.card-visa{
+    background: url(../assets/imgs/SmartPay-Card-720x460px.png) scroll no-repeat;
+    width: 100%;
+    padding-top: 64%;
+    background-size: cover;
+    position: relative;
+
+    .card-number {
+        display: block;
+        position: absolute;
+        left: 20px;
+        bottom: 55px;
+        color: #fff;
+        font-size: 150%;
+        font-weight: bold;
+        font-family: inherit;
+    }
+    .card-name {
+        display: block;
+        position: absolute;
+        left: 20px;
+        bottom: 28px;
+        color: #fff;
+        font-size: 124%;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+   
+}

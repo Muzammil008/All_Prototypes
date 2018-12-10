@@ -1,0 +1,98 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    padding: 0px;
+    margin: 0px;
+}
+.ruler {
+    /* position: absolute;
+    top:0; left:0; */
+    width: 100%; height: 25px;
+    background: #eee; 
+    color: #000;
+    font-family: arial;
+    font-size: 12px; line-height: 14px;
+    border-bottom: 1px solid;
+    overflow: hidden;
+    z-index: 9;
+    position: relative;
+}
+.ruler.fixed{
+    position: fixed;
+    top: 0;
+}
+.ruler > div {
+    display: inline-block;
+    background: #000;
+}
+.ruler .tickLabel {
+    position:relative;
+    top: -10px;
+    margin-left: 4px;
+    width: 1px;
+    height: 100%;
+    text-indent: 1px;
+    line-height: 20px;
+    font-size: 0px;
+}
+.ruler .tickLabel:first-of-type {
+    margin-left: 0px;
+}
+.ruler .tickMajor {
+    margin-top: 19px;
+    margin-left: 4px;
+    width: 1px;
+    height: 6px;
+}
+.ruler .tickMinor {
+    margin-left: 4px;
+    width: 1px;
+    height: 4px;
+}
+.ruler .pointer {
+    position: relative;
+    top: 0;
+    /* left: 10%; */
+    height: 100%;
+    width: 2px;
+    background-color: #ef0000!important;
+    bottom: 0;
+
+  -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    -ms-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+
+}
+.ruler .pointer:before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-top: 8px solid #ef0000;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+}
+
+.container{
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.section-posts{
+    margin: 10px 0;
+}
+.post-widget{
+    margin-bottom: 15px;
+}
+.post-widget img{
+    margin-bottom: 15px;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
