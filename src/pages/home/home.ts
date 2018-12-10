@@ -1,5 +1,5 @@
 import { Component, ViewChild, NgZone, ElementRef, HostListener } from '@angular/core';
-import { NavController, Platform, Content, Scroll } from 'ionic-angular';
+import { NavController, Platform, Content, Scroll, IonicPage } from 'ionic-angular';
 import { CommunicatorProvider } from '../../providers/communicator/communicator';
 import { LoginPage } from '../login/login';
 import { CardsliderPage } from '../cardslider/cardslider';
@@ -8,11 +8,13 @@ import { ScrollEvent } from 'ngx-scroll-event';
 import { QrReaderPage } from '../qr-reader/qr-reader';
 import { CardIoPage } from '../card-io/card-io';
 declare var $: any;
+@IonicPage()
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
+  public total_SumAmount:number=0;
   public totalAmount: number = 120;
   public totalAmountfix: number = 0;
   public data;
@@ -37,7 +39,7 @@ export class HomePage {
       "Name": "Muzammil",
       "DollarAmount": 5000,
       "PakAmount": 200000, "Points": 10,
-      "totalAmount":120,
+      "totalAmount": 120,
       "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
       "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
     },
@@ -47,7 +49,7 @@ export class HomePage {
       "imgUrl": "assets/imgs/a.jpg",
       "DollarAmount": 6000,
       "PakAmount": 300000,
-      "totalAmount":110,
+      "totalAmount": 110,
       "title": "qui est esse", "Points": 10,
       "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
     },
@@ -57,7 +59,7 @@ export class HomePage {
       "imgUrl": "assets/imgs/az.jpg",
       "DollarAmount": 5000,
       "PakAmount": 800000, "Points": 10,
-      "totalAmount":100,
+      "totalAmount": 100,
       "title": "ea molestias quasi exercitationem repellat qui ipsa sit aut",
       "body": "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut"
     },
@@ -66,7 +68,7 @@ export class HomePage {
       "Name": "Zuhaib",
       "imgUrl": "assets/imgs/c.jpg",
       "DollarAmount": 4000,
-      "PakAmount": 900000, "Points": 10, "totalAmount":90,
+      "PakAmount": 900000, "Points": 10, "totalAmount": 90,
       "title": "eum et est occaecati",
       "body": "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit"
     },
@@ -75,7 +77,7 @@ export class HomePage {
       "imgUrl": "assets/imgs/e.jpg",
       "Name": "Muzammil",
       "DollarAmount": 5000,
-      "PakAmount": 200000, "Points": 10,"totalAmount":80,
+      "PakAmount": 200000, "Points": 10, "totalAmount": 80,
       "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
       "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
     },
@@ -84,7 +86,7 @@ export class HomePage {
       "Name": "Fahad",
       "imgUrl": "assets/imgs/a.jpg",
       "DollarAmount": 6000,
-      "PakAmount": 300000, "Points": 10,"totalAmount":70,
+      "PakAmount": 300000, "Points": 10, "totalAmount": 70,
       "title": "qui est esse",
       "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
     },
@@ -93,7 +95,7 @@ export class HomePage {
       "Name": "Ali",
       "imgUrl": "assets/imgs/az.jpg",
       "DollarAmount": 5000,
-      "PakAmount": 800000, "Points": 10,"totalAmount":60,
+      "PakAmount": 800000, "Points": 10, "totalAmount": 60,
       "title": "ea molestias quasi exercitationem repellat qui ipsa sit aut",
       "body": "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut"
     },
@@ -103,7 +105,7 @@ export class HomePage {
       "imgUrl": "assets/imgs/c.jpg",
       "DollarAmount": 4000,
       "PakAmount": 900000, "Points": 10,
-      "title": "eum et est occaecati","totalAmount":50,
+      "title": "eum et est occaecati", "totalAmount": 50,
       "body": "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit"
     },
     {
@@ -111,7 +113,7 @@ export class HomePage {
       "imgUrl": "assets/imgs/e.jpg",
       "Name": "Muzammil",
       "DollarAmount": 5000,
-      "PakAmount": 200000, "Points": 10,"totalAmount":40,
+      "PakAmount": 200000, "Points": 10, "totalAmount": 40,
       "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
       "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
     },
@@ -122,7 +124,7 @@ export class HomePage {
       "DollarAmount": 6000,
       "PakAmount": 300000,
       "Points": 10,
-      "title": "qui est esse","totalAmount":30,
+      "title": "qui est esse", "totalAmount": 30,
       "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
     },
     {
@@ -131,7 +133,7 @@ export class HomePage {
       "imgUrl": "assets/imgs/az.jpg",
       "DollarAmount": 5000,
       "PakAmount": 800000,
-      "Points": 10,"totalAmount":20,
+      "Points": 10, "totalAmount": 20,
       "title": "ea molestias quasi exercitationem repellat qui ipsa sit aut",
       "body": "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut"
     },
@@ -141,7 +143,7 @@ export class HomePage {
       "imgUrl": "assets/imgs/c.jpg",
       "DollarAmount": 4000,
       "PakAmount": 900000,
-      "Points": 10,"totalAmount":10,
+      "Points": 10, "totalAmount": 10,
       "title": "eum et est occaecati",
       "body": "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit"
     }
@@ -189,16 +191,21 @@ export class HomePage {
       this.items.push(this.Data[this.startIndex]);
 
       // this.totalAmount = this.totalAmount - 10;
-      this.totalAmount=this.Data[this.currentItem ].totalAmount;
+      this.totalAmount = this.Data[this.currentItem].totalAmount;
     }
+
+ 
 
 
 
   }
-  ionViewDidLoad() {
+  ionViewWillEnter     () {
 
-  
-console.log("call method")
+    for (var i = 0; i < this.Data.length; i++) {
+      this.total_SumAmount=this.total_SumAmount + this.Data[i].Points;
+          }
+          console.log(this.total_SumAmount)
+    console.log("call method")
     this.content.ionScrollEnd.subscribe((data) => {
       console.log(data)
       this.direction = data.directionY;
@@ -211,19 +218,19 @@ console.log("call method")
           // }
           // console.log(this.currentItem);
 
-          this.totalAmount=this.Data[this.currentItem - 1 ].totalAmount;
+          this.totalAmount = this.Data[this.currentItem - 1].totalAmount;
 
-       
+
 
         } else {
           if (this.items.length == 12) {
-            this.totalAmount=this.Data[this.currentItem - 1 ].totalAmount;
+            this.totalAmount = this.Data[this.currentItem - 1].totalAmount;
             // this.totalAmount = this.totalAmount - this.Data[this.currentItem - 1].Points;
           }
         }
       });
-     
-     
+
+
     })
   }
 
@@ -286,7 +293,7 @@ console.log("call method")
         //   this.totalAmount=0;
         // }
 
-        this.totalAmount=this.Data[this.currentItem - 1].totalAmount;
+        this.totalAmount = this.Data[this.currentItem - 1].totalAmount;
 
 
 
@@ -305,7 +312,7 @@ console.log("call method")
 
   }
 
-  gotoCardIo(){
+  gotoCardIo() {
     this.navCtrl.push(CardIoPage)
   }
   gotoLogin() {
@@ -322,7 +329,7 @@ console.log("call method")
   }
 
 
-  gotoQrReader(){
+  gotoQrReader() {
     this.navCtrl.push(QrReaderPage)
   }
 }
