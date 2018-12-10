@@ -204,7 +204,7 @@ export class HomePage {
     for (var i = 0; i < this.Data.length; i++) {
       this.total_SumAmount=this.total_SumAmount + this.Data[i].Points;
           }
-          console.log(this.total_SumAmount)
+          
     console.log("call method")
     this.content.ionScrollEnd.subscribe((data) => {
       console.log(data)
