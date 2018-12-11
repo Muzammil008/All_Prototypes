@@ -18,6 +18,7 @@ import { QrReaderPage } from '../pages/qr-reader/qr-reader';
 import { Camera } from '@ionic-native/camera';
 import { CardIO } from '@ionic-native/card-io';
 import { CardIoPage } from '../pages/card-io/card-io';
+import { ReversePipe } from '../pipes/reverse/reverse';
 @NgModule({
   declarations: [
     MyApp,
@@ -26,7 +27,8 @@ import { CardIoPage } from '../pages/card-io/card-io';
     CardsliderPage,
     VisapagePage,
     QrReaderPage,
-    CardIoPage
+    CardIoPage,
+    ReversePipe
   ],
   imports: [
     BrowserModule,HttpModule,FormsModule,ScrollEventModule,NgQRCodeReaderModule,

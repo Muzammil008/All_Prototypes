@@ -3,7 +3,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { CardsliderPage } from '../cardslider/cardslider';
 import { VisapagePage } from '../visapage/visapage';
+import { QrReaderPage } from '../qr-reader/qr-reader';
+import { CardIoPage } from '../card-io/card-io';
 
+declare var $:any;
 /**
  * Generated class for the LoginPage page.
  *
@@ -36,6 +39,21 @@ export class LoginPage {
     this.navCtrl.push(VisapagePage)
   }
 
+  activeOverlay(){    
+    if( $('.fab').hasClass('fab-close-active') ){
+      $('.overlay').remove();
+    }
+    else
+    {
+      $('.scroll-content').append('<div class="overlay" ></div>');
+    }
+  }
 
+  gotoQrReader(){
+    this.navCtrl.push(QrReaderPage)
+  }
 
+  gotoCardIo() {
+    this.navCtrl.push(CardIoPage)
+  }
 }

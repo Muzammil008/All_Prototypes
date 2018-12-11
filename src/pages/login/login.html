@@ -82,5 +82,17 @@
                       </form>
               </div>
 
-              
+              <ion-fab bottom center >
+                <button ion-fab (click)="activeOverlay()"  ><ion-icon name="ios-more"></ion-icon></button>
+                <ion-fab-list side="top">
+                  <button ion-fab (click)="gotoQrReader()" class="animated slideInUp"><ion-icon name="ios-qr-scanner"></ion-icon><ion-label>QR reader</ion-label></button>
+                 
+                </ion-fab-list>
+                <ion-fab-list side="left">
+                <button ion-fab (click)="gotoSocial()" class="animated slideInRight"><ion-icon name="logo-twitter"></ion-icon><ion-label>Social Post</ion-label></button>
+              </ion-fab-list>
+              <ion-fab-list side="right">
+                <button ion-fab (click)="gotoCardIo()" class="animated slideInLeft"><ion-icon name="ios-card"></ion-icon><ion-label>Visa Card</ion-label></button>
+              </ion-fab-list>
+              </ion-fab>
 </ion-content>

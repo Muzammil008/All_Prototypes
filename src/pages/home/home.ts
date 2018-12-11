@@ -1,20 +1,20 @@
 import { Component, ViewChild, NgZone, ElementRef, HostListener } from '@angular/core';
-import { NavController, Platform, Content, Scroll, IonicPage } from 'ionic-angular';
+import { NavController, Platform, Content, Scroll } from 'ionic-angular';
 import { CommunicatorProvider } from '../../providers/communicator/communicator';
 import { LoginPage } from '../login/login';
 import { CardsliderPage } from '../cardslider/cardslider';
 import { VisapagePage } from '../visapage/visapage';
-import { ScrollEvent } from 'ngx-scroll-event';
+
 import { QrReaderPage } from '../qr-reader/qr-reader';
 import { CardIoPage } from '../card-io/card-io';
 declare var $: any;
-@IonicPage()
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
-  public total_SumAmount:number=0;
+  public total_SumAmount: number = 0;
   public totalAmount: number = 120;
   public totalAmountfix: number = 0;
   public data;
@@ -152,6 +152,24 @@ export class HomePage {
 
   constructor(public zone: NgZone, public plt: Platform, private CommunicatorProvider: CommunicatorProvider, public navCtrl: NavController) {
 
+    for (var i = 0; i < this.Data.length; i++) {
+      this.total_SumAmount = this.total_SumAmount + this.Data[i].totalAmount;
+    }
+    console.log(this.total_SumAmount)
+
+    $('.gedf-card[data-post-number="1"]').addClass('active');
+
+
+    // console.log('setPercentageForRuler: '+this.total_SumAmount);
+    // console.log(parseInt(setPercentageForRuler.toString()));
+
+    setTimeout(() => {
+   
+      let setPercentageForRuler = $('.gedf-card[data-post-number="1"]').attr('data-post-value') / this.total_SumAmount * 100;
+      $('.ruler .pointer').css({ 'left': setPercentageForRuler+'%' });
+      console.log('setPercentageForRuler ' + $('.gedf-card[data-post-number="1"]').attr('data-post-value'));
+      console.log(this.total_SumAmount);
+    }, 400);
 
     console.log(console.log(plt.width()))
     console.log(console.log(plt.height()))
@@ -194,17 +212,14 @@ export class HomePage {
       this.totalAmount = this.Data[this.currentItem].totalAmount;
     }
 
- 
+
 
 
 
   }
-  ionViewWillEnter     () {
+  ionViewWillEnter() {
 
-    for (var i = 0; i < this.Data.length; i++) {
-      this.total_SumAmount=this.total_SumAmount + this.Data[i].Points;
-          }
-          
+
     console.log("call method")
     this.content.ionScrollEnd.subscribe((data) => {
       console.log(data)
@@ -239,8 +254,20 @@ export class HomePage {
 
     let post = $('.gedf-card');
     // let totalPost = post.length;
-    let totalPost = this.Data.length;
-    let setPercentage = 100 / totalPost + '%';
+    //let totalPost = this.Data.length;
+    let totalPost = this.total_SumAmount;
+    let setPercentage;
+
+
+
+    if (this.currentItem == 0) {
+      setPercentage = this.Data[this.currentItem].totalAmount / totalPost * 100
+    } else {
+      setPercentage = this.Data[this.currentItem - 1].totalAmount / totalPost * 100
+    }
+
+    // console.log('Total: '+totalPost);
+    // console.log('Set Percentage: '+ this.Data[this.currentItem].totalAmount);
 
 
     $('.gedf-card').each(function () {
@@ -253,21 +280,22 @@ export class HomePage {
     });
 
     let getActiveNumber = parseInt($('.gedf-card.active').attr('data-post-number'));
-    console.log(getActiveNumber)
+    //console.log(getActiveNumber)
+
     this.currentItem = getActiveNumber;
     //  let getPercentage = parseInt(100 / totalPost) * getActiveNumber + '%';
-    let getPercentage = 100 / totalPost * getActiveNumber + '%';
+    let getPercentage = $('.gedf-card.active').attr('data-post-value') / totalPost * 100 + '%';
 
+    $('.ruler .pointer').css({ 'left': getPercentage });
 
-
-    if ($('.scroll-content').scrollTop() > 10) {
-      $('.ruler').addClass('fixed');
-      $('.ruler .pointer').css({ 'left': getPercentage });
-    }
-    else {
-      $('.ruler').removeClass('fixed');
-      $('.ruler .pointer').css({ 'left': 0 });
-    }
+    // if ($('.scroll-content').scrollTop() > 10) {
+    //   $('.ruler').addClass('fixed');
+    //   $('.ruler .pointer').css({ 'left': getPercentage });
+    // }
+    // else {
+    //   $('.ruler').removeClass('fixed');
+    //   $('.ruler .pointer').css({ 'left': 0 });
+    // }
 
   }
 
