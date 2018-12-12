@@ -82,7 +82,7 @@
                       </form>
               </div>
 
-              <ion-fab class="ion-fab" bottom center >
+              <ion-fab class="ion-fab" bottom right>
                   
                   <!-- <ion-fab-list side="top">
                     <button ion-fab (click)="gotoQrReader()" class="animated slideInUp_"><ion-icon name="ios-qr-scanner"></ion-icon><ion-label>QR reader</ion-label></button>
@@ -95,15 +95,11 @@
                   <button ion-fab (click)="gotoCardIo()" class="animated slideInLeft_"><ion-icon name="ios-card"></ion-icon><ion-label>Visa Card</ion-label></button>
                 </ion-fab-list> -->
                 <div class="ion-fab--top">
-                    <button ion-fab (click)="gotoQrReader()" class="animated slideInUp_"><ion-icon name="ios-qr-scanner"></ion-icon><ion-label>QR reader</ion-label></button>
+                    <button ion-fab="1" (click)="gotoQrReader()" class="animated slideInUp_"><ion-icon name="ios-qr-scanner"></ion-icon><ion-label>QR reader</ion-label></button>
+                    <button ion-fab="2" (click)="gotoSocial()" class="animated slideInRight_"><ion-icon name="logo-twitter"></ion-icon><ion-label>Social Post</ion-label></button>
+                    <button ion-fab="3" (click)="gotoCardIo()" class="animated slideInLeft_"><ion-icon name="ios-card"></ion-icon><ion-label>Visa Card</ion-label></button>
                 </div>
-                <div class="ion-fab--left">
-                    <button ion-fab (click)="gotoSocial()" class="animated slideInRight_"><ion-icon name="logo-twitter"></ion-icon><ion-label>Social Post</ion-label></button>
-                </div>
-                <div class="ion-fab--right">
-                    <button ion-fab (click)="gotoCardIo()" class="animated slideInLeft_"><ion-icon name="ios-card"></ion-icon><ion-label>Visa Card</ion-label></button>
-                </div>
-                <button ion-fab (click)="activeOverlay()"><ion-icon name="ios-more"></ion-icon></button>
+                <button ion-fab (click)="activeOverlay($event)"><ion-icon [name]="iconName"></ion-icon></button>
               </ion-fab>
 
               <div class="overlay" style="display:none"></div>

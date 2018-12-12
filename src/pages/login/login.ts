@@ -21,6 +21,9 @@ declare var $:any;
 })
 export class LoginPage {
 
+  iconName:any='ios-more';
+  checkIcon:boolean = false;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
@@ -39,7 +42,7 @@ export class LoginPage {
     this.navCtrl.push(VisapagePage)
   }
 
-  activeOverlay(){
+  activeOverlay(e){
     $('.ion-fab').toggleClass('active');
 
     if( $('.overlay').css('display') == 'none' ){
@@ -49,6 +52,18 @@ export class LoginPage {
     {
       $('.overlay').fadeOut(300);
     }
+
+    if(this.checkIcon==false){
+      this.checkIcon = true;
+      this.iconName = 'ios-close';
+    }else{
+      this.checkIcon = false;
+      this.iconName = 'ios-more';
+    }
+
+    
+
+    //console.log(e);
     
   }
 
