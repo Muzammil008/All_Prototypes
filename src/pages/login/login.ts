@@ -39,14 +39,17 @@ export class LoginPage {
     this.navCtrl.push(VisapagePage)
   }
 
-  activeOverlay(){    
-    if( $('.fab').hasClass('fab-close-active') ){
-      $('.overlay').remove();
+  activeOverlay(){
+    $('.ion-fab').toggleClass('active');
+
+    if( $('.overlay').css('display') == 'none' ){
+      $('.overlay').fadeIn(300);
     }
     else
     {
-      $('.scroll-content').append('<div class="overlay" ></div>');
+      $('.overlay').fadeOut(300);
     }
+    
   }
 
   gotoQrReader(){
