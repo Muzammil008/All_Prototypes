@@ -305,12 +305,15 @@ ion-fab-list[side=top]{
       width: 56px;
       display: block;
       text-align: center;
+      position: relative;
 
       button{
         margin-bottom: 10px;
         display: table;
         margin-left: auto;
         margin-right: auto;
+        position: absolute;
+        left: 8px;
       }
 
       ion-label{
@@ -322,35 +325,32 @@ ion-fab-list[side=top]{
       [ion-fab]{
         opacity: 0;
         visibility: hidden;
+        position: absolute;
+        top: 0;
   
-        transition-property: opacity, visibility, transform;
-        transition-duration: 0.5s, 1s, 0.2s;
-        transition-delay: 0.5s, 0s, 0s;
+        transition-property: opacity, visibility, top;
+        transition-duration: 0.5s, 1s, 0.5s;
+        transition-delay: 0.5s, 0s, 0.1s;
+        transition-timing-function: ease-in-out;
 
-      -webkit-transition: all 0.5s ease-in-out;
-      -moz-transition: all 0.5s ease-in-out;
-      -o-transition: all 0.5s ease-in-out;
-      transition: all 0.5s ease-in-out;
+      // -webkit-transition: all 0.5s ease-in-out;
+      // -moz-transition: all 0.5s ease-in-out;
+      // -o-transition: all 0.5s ease-in-out;
+      // transition: all 0.5s ease-in-out;
+
+      // -webkit-transition: all 0.5s ease-in-out;
+      //     -moz-transition: all 0.5s ease-in-out;
+      //     -o-transition: all 0.5s ease-in-out;
+      //     transition: all 0.5s ease-in-out;
 
       ion-icon{
         &:before{
-          -webkit-transition: all 0.5s ease-in-out;
-          -moz-transition: all 0.5s ease-in-out;
-          -o-transition: all 0.5s ease-in-out;
-          transition: all 0.5s ease-in-out;
+          
         }
       }
 
       }
-      [ion-fab="1"] {
-        transform: translateY(420%);
-      }
-      [ion-fab="2"] {
-        transform: translateY(296%);
-      }
-      [ion-fab="3"] {
-        transform: translateY(170%);
-      }
+      
 
     }// .ion-fab--top
 
@@ -366,12 +366,22 @@ ion-fab-list[side=top]{
       }
       .ion-fab--top{
         [ion-fab]{
-          transform: translateY(0%);
+          //transform: translateY(0%);
           opacity: 1;
           visibility: visible;
-          transition-property: visibility, opacity, transform;
-          transition-duration: 0s, 0.2s, 0s;
-        }  
+          transition-property: visibility, opacity, top;
+          transition-duration: 0s, 0.2s, 0.5s;
+          transition-timing-function: ease-in-out;
+        }
+        [ion-fab="1"] {
+          top: -155px;
+        }
+        [ion-fab="2"] {
+          top: -105px;
+        }
+        [ion-fab="3"] {
+          top: -55px;
+        }
       }
     }
 
