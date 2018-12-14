@@ -19,6 +19,9 @@ import { Camera } from '@ionic-native/camera';
 import { CardIO } from '@ionic-native/card-io';
 import { CardIoPage } from '../pages/card-io/card-io';
 import { ReversePipe } from '../pipes/reverse/reverse';
+import { ChartModule} from 'angular2-highcharts';
+
+
 @NgModule({
   declarations: [
     MyApp,
@@ -32,8 +35,8 @@ import { ReversePipe } from '../pipes/reverse/reverse';
   ],
   imports: [
     BrowserModule,HttpModule,FormsModule,ScrollEventModule,NgQRCodeReaderModule,
-    HttpClientModule,
-
+    HttpClientModule, ChartModule,
+    
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],

@@ -21,6 +21,8 @@ export class HomePage {
   public loadItems: any[] = [];
   public lastIndex: number = 2;
   public startIndex: number = 0;
+
+  public maxAmount: number;
   items = [];
   currentItem = 0;
   total = 10;
@@ -38,7 +40,8 @@ export class HomePage {
       "imgUrl": "assets/imgs/e.jpg",
       "Name": "Muzammil",
       "DollarAmount": 5000,
-      "PakAmount": 200000, "Points": 10,
+      "PakAmount": 200000,
+      "Points": 10,
       "totalAmount": 120,
       "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
       "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
@@ -59,7 +62,7 @@ export class HomePage {
       "imgUrl": "assets/imgs/az.jpg",
       "DollarAmount": 5000,
       "PakAmount": 800000, "Points": 10,
-      "totalAmount": 100,
+      "totalAmount": 140,
       "title": "ea molestias quasi exercitationem repellat qui ipsa sit aut",
       "body": "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut"
     },
@@ -68,7 +71,7 @@ export class HomePage {
       "Name": "Zuhaib",
       "imgUrl": "assets/imgs/c.jpg",
       "DollarAmount": 4000,
-      "PakAmount": 900000, "Points": 10, "totalAmount": 90,
+      "PakAmount": 900000, "Points": 10, "totalAmount": 60,
       "title": "eum et est occaecati",
       "body": "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit"
     },
@@ -77,7 +80,7 @@ export class HomePage {
       "imgUrl": "assets/imgs/e.jpg",
       "Name": "Muzammil",
       "DollarAmount": 5000,
-      "PakAmount": 200000, "Points": 10, "totalAmount": 80,
+      "PakAmount": 200000, "Points": 10, "totalAmount": 150,
       "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
       "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
     },
@@ -86,7 +89,7 @@ export class HomePage {
       "Name": "Fahad",
       "imgUrl": "assets/imgs/a.jpg",
       "DollarAmount": 6000,
-      "PakAmount": 300000, "Points": 10, "totalAmount": 70,
+      "PakAmount": 300000, "Points": 10, "totalAmount": 50,
       "title": "qui est esse",
       "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
     },
@@ -95,7 +98,7 @@ export class HomePage {
       "Name": "Ali",
       "imgUrl": "assets/imgs/az.jpg",
       "DollarAmount": 5000,
-      "PakAmount": 800000, "Points": 10, "totalAmount": 60,
+      "PakAmount": 800000, "Points": 10, "totalAmount": 20,
       "title": "ea molestias quasi exercitationem repellat qui ipsa sit aut",
       "body": "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut"
     },
@@ -146,33 +149,453 @@ export class HomePage {
       "Points": 10, "totalAmount": 10,
       "title": "eum et est occaecati",
       "body": "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit"
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {
+      "Id": 13,
+      "imgUrl": "assets/imgs/e.jpg",
+      "Name": "Muzammil",
+      "DollarAmount": 5000,
+      "PakAmount": 200000,
+      "Points": 10,
+      "totalAmount": 120,
+      "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+    },
+    {
+      "Id": 14,
+      "Name": "Fahad",
+      "imgUrl": "assets/imgs/a.jpg",
+      "DollarAmount": 6000,
+      "PakAmount": 300000,
+      "totalAmount": 110,
+      "title": "qui est esse", "Points": 10,
+      "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
+    },
+    {
+      "Id": 15,
+      "Name": "Ali",
+      "imgUrl": "assets/imgs/az.jpg",
+      "DollarAmount": 5000,
+      "PakAmount": 800000, "Points": 10,
+      "totalAmount": 140,
+      "title": "ea molestias quasi exercitationem repellat qui ipsa sit aut",
+      "body": "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut"
+    },
+    {
+      "Id": 16,
+      "Name": "Zuhaib",
+      "imgUrl": "assets/imgs/c.jpg",
+      "DollarAmount": 4000,
+      "PakAmount": 900000, "Points": 10, "totalAmount": 60,
+      "title": "eum et est occaecati",
+      "body": "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit"
+    },
+    {
+      "Id": 17,
+      "imgUrl": "assets/imgs/e.jpg",
+      "Name": "Muzammil",
+      "DollarAmount": 5000,
+      "PakAmount": 200000, "Points": 10, "totalAmount": 150,
+      "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+    },
+    {
+      "Id": 18,
+      "Name": "Fahad",
+      "imgUrl": "assets/imgs/a.jpg",
+      "DollarAmount": 6000,
+      "PakAmount": 300000, "Points": 10, "totalAmount": 50,
+      "title": "qui est esse",
+      "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
+    },
+    {
+      "Id": 19,
+      "Name": "Ali",
+      "imgUrl": "assets/imgs/az.jpg",
+      "DollarAmount": 5000,
+      "PakAmount": 800000, "Points": 10, "totalAmount": 20,
+      "title": "ea molestias quasi exercitationem repellat qui ipsa sit aut",
+      "body": "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut"
+    },
+    {
+      "Id": 20,
+      "Name": "Zuhaib",
+      "imgUrl": "assets/imgs/c.jpg",
+      "DollarAmount": 4000,
+      "PakAmount": 900000, "Points": 10,
+      "title": "eum et est occaecati", "totalAmount": 50,
+      "body": "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit"
+    },
+    {
+      "Id": 21,
+      "imgUrl": "assets/imgs/e.jpg",
+      "Name": "Muzammil",
+      "DollarAmount": 5000,
+      "PakAmount": 200000, "Points": 10, "totalAmount": 40,
+      "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+    },
+    {
+      "Id": 22,
+      "Name": "Fahad",
+      "imgUrl": "assets/imgs/a.jpg",
+      "DollarAmount": 6000,
+      "PakAmount": 300000,
+      "Points": 10,
+      "title": "qui est esse", "totalAmount": 30,
+      "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
+    },
+    {
+      "Id": 23,
+      "Name": "Ali",
+      "imgUrl": "assets/imgs/az.jpg",
+      "DollarAmount": 5000,
+      "PakAmount": 800000,
+      "Points": 10, "totalAmount": 20,
+      "title": "ea molestias quasi exercitationem repellat qui ipsa sit aut",
+      "body": "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut"
+    },
+    {
+      "Id": 24,
+      "Name": "Zuhaib",
+      "imgUrl": "assets/imgs/c.jpg",
+      "DollarAmount": 4000,
+      "PakAmount": 900000,
+      "Points": 10, "totalAmount": 10,
+      "title": "eum et est occaecati",
+      "body": "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit"
+    },
+
+
+
+
+
+
+    {
+      "Id": 25,
+      "imgUrl": "assets/imgs/e.jpg",
+      "Name": "Muzammil",
+      "DollarAmount": 5000,
+      "PakAmount": 200000,
+      "Points": 10,
+      "totalAmount": 120,
+      "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+    },
+    {
+      "Id": 26,
+      "Name": "Fahad",
+      "imgUrl": "assets/imgs/a.jpg",
+      "DollarAmount": 6000,
+      "PakAmount": 300000,
+      "totalAmount": 110,
+      "title": "qui est esse", "Points": 10,
+      "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
+    },
+    {
+      "Id": 27,
+      "Name": "Ali",
+      "imgUrl": "assets/imgs/az.jpg",
+      "DollarAmount": 5000,
+      "PakAmount": 800000, "Points": 10,
+      "totalAmount": 140,
+      "title": "ea molestias quasi exercitationem repellat qui ipsa sit aut",
+      "body": "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut"
+    },
+    {
+      "Id": 28,
+      "Name": "Zuhaib",
+      "imgUrl": "assets/imgs/c.jpg",
+      "DollarAmount": 4000,
+      "PakAmount": 900000, "Points": 10, "totalAmount": 60,
+      "title": "eum et est occaecati",
+      "body": "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit"
+    },
+    {
+      "Id": 29,
+      "imgUrl": "assets/imgs/e.jpg",
+      "Name": "Muzammil",
+      "DollarAmount": 5000,
+      "PakAmount": 200000, "Points": 10, "totalAmount": 150,
+      "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+    },
+    {
+      "Id": 30,
+      "Name": "Fahad",
+      "imgUrl": "assets/imgs/a.jpg",
+      "DollarAmount": 6000,
+      "PakAmount": 300000, "Points": 10, "totalAmount": 50,
+      "title": "qui est esse",
+      "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
+    },
+    {
+      "Id": 31,
+      "Name": "Ali",
+      "imgUrl": "assets/imgs/az.jpg",
+      "DollarAmount": 5000,
+      "PakAmount": 800000, "Points": 10, "totalAmount": 20,
+      "title": "ea molestias quasi exercitationem repellat qui ipsa sit aut",
+      "body": "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut"
+    },
+    {
+      "Id": 32,
+      "Name": "Zuhaib",
+      "imgUrl": "assets/imgs/c.jpg",
+      "DollarAmount": 4000,
+      "PakAmount": 900000, "Points": 10,
+      "title": "eum et est occaecati", "totalAmount": 50,
+      "body": "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit"
+    },
+    {
+      "Id": 33,
+      "imgUrl": "assets/imgs/e.jpg",
+      "Name": "Muzammil",
+      "DollarAmount": 5000,
+      "PakAmount": 200000, "Points": 10, "totalAmount": 40,
+      "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+    },
+    {
+      "Id": 34,
+      "Name": "Fahad",
+      "imgUrl": "assets/imgs/a.jpg",
+      "DollarAmount": 6000,
+      "PakAmount": 300000,
+      "Points": 10,
+      "title": "qui est esse", "totalAmount": 30,
+      "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
+    },
+    {
+      "Id": 35,
+      "Name": "Ali",
+      "imgUrl": "assets/imgs/az.jpg",
+      "DollarAmount": 5000,
+      "PakAmount": 800000,
+      "Points": 10, "totalAmount": 20,
+      "title": "ea molestias quasi exercitationem repellat qui ipsa sit aut",
+      "body": "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut"
+    },
+    {
+      "Id": 36,
+      "Name": "Zuhaib",
+      "imgUrl": "assets/imgs/c.jpg",
+      "DollarAmount": 4000,
+      "PakAmount": 900000,
+      "Points": 10, "totalAmount": 10,
+      "title": "eum et est occaecati",
+      "body": "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit"
+    },
+
+    {
+      "Id":37,
+      "imgUrl": "assets/imgs/e.jpg",
+      "Name": "Muzammil",
+      "DollarAmount": 5000,
+      "PakAmount": 200000,
+      "Points": 10,
+      "totalAmount": 120,
+      "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+    },
+    {
+      "Id": 38,
+      "Name": "Fahad",
+      "imgUrl": "assets/imgs/a.jpg",
+      "DollarAmount": 6000,
+      "PakAmount": 300000,
+      "totalAmount": 110,
+      "title": "qui est esse", "Points": 10,
+      "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
+    },
+    {
+      "Id": 39,
+      "Name": "Ali",
+      "imgUrl": "assets/imgs/az.jpg",
+      "DollarAmount": 5000,
+      "PakAmount": 800000, "Points": 10,
+      "totalAmount": 140,
+      "title": "ea molestias quasi exercitationem repellat qui ipsa sit aut",
+      "body": "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut"
+    },
+    {
+      "Id": 40,
+      "Name": "Zuhaib",
+      "imgUrl": "assets/imgs/c.jpg",
+      "DollarAmount": 4000,
+      "PakAmount": 900000, "Points": 10, "totalAmount": 60,
+      "title": "eum et est occaecati",
+      "body": "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit"
+    },
+    {
+      "Id": 41,
+      "imgUrl": "assets/imgs/e.jpg",
+      "Name": "Muzammil",
+      "DollarAmount": 5000,
+      "PakAmount": 200000, "Points": 10, "totalAmount": 150,
+      "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+    },
+    {
+      "Id": 42,
+      "Name": "Fahad",
+      "imgUrl": "assets/imgs/a.jpg",
+      "DollarAmount": 6000,
+      "PakAmount": 300000, "Points": 10, "totalAmount": 50,
+      "title": "qui est esse",
+      "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
+    },
+    {
+      "Id": 43,
+      "Name": "Ali",
+      "imgUrl": "assets/imgs/az.jpg",
+      "DollarAmount": 5000,
+      "PakAmount": 800000, "Points": 10, "totalAmount": 20,
+      "title": "ea molestias quasi exercitationem repellat qui ipsa sit aut",
+      "body": "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut"
+    },
+    {
+      "Id": 44,
+      "Name": "Zuhaib",
+      "imgUrl": "assets/imgs/c.jpg",
+      "DollarAmount": 4000,
+      "PakAmount": 900000, "Points": 10,
+      "title": "eum et est occaecati", "totalAmount": 50,
+      "body": "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit"
+    },
+    {
+      "Id": 45,
+      "imgUrl": "assets/imgs/e.jpg",
+      "Name": "Muzammil",
+      "DollarAmount": 5000,
+      "PakAmount": 200000, "Points": 10, "totalAmount": 40,
+      "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+    },
+    {
+      "Id": 46,
+      "Name": "Fahad",
+      "imgUrl": "assets/imgs/a.jpg",
+      "DollarAmount": 6000,
+      "PakAmount": 300000,
+      "Points": 10,
+      "title": "qui est esse", "totalAmount": 30,
+      "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
+    },
+    {
+      "Id": 47,
+      "Name": "Ali",
+      "imgUrl": "assets/imgs/az.jpg",
+      "DollarAmount": 5000,
+      "PakAmount": 800000,
+      "Points": 10, "totalAmount": 20,
+      "title": "ea molestias quasi exercitationem repellat qui ipsa sit aut",
+      "body": "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut"
+    },
+    {
+      "Id": 48,
+      "Name": "Zuhaib",
+      "imgUrl": "assets/imgs/c.jpg",
+      "DollarAmount": 4000,
+      "PakAmount": 900000,
+      "Points": 10, "totalAmount": 10,
+      "title": "eum et est occaecati",
+      "body": "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit"
     }
-  ]
+
+
+
+
+
+
+
+
+  ];
+
+  // Ruler
+  public ruler = $('.ruler');
+  public screenWidth = window.innerWidth;
+  public NumbersOfPosts = this.Data.length;
+  public maxAmounts = this.maxAmount;
+  public linesPerScreen = 44;
+  public pointerWidth = ( this.screenWidth / this.linesPerScreen )  - 1.2;
+  public activePostNumber = $('.gedf-card.active').attr('data-post-number');
+
 
 
   constructor(public zone: NgZone, public plt: Platform, private CommunicatorProvider: CommunicatorProvider, public navCtrl: NavController) {
+    this.maxAmount = this.Data[0].totalAmount;
 
+    // Sum of All Items Amount
     for (var i = 0; i < this.Data.length; i++) {
       this.total_SumAmount = this.total_SumAmount + this.Data[i].totalAmount;
-    }
-    console.log(this.total_SumAmount)
 
-    $('.gedf-card[data-post-number="1"]').addClass('active');
+    }
+
+    // Get Max Value for totalAmount
+    for (var i = 1; i < this.Data.length; i++) {
+      if (this.maxAmount < this.Data[i].totalAmount) {
+        this.maxAmount = this.Data[i].totalAmount;
+      }
+    }
+    console.log('maxAmount: ' + this.maxAmount);
+
+    
+    
+    // $(window).on('load resize', function() {
+      
+      
+    // });  
+    
+    setTimeout(()=>{
+      $('.ruler').empty();
+      this.createRuler();
+    },400);
+    
+    
+
+
+    // $('.gedf-card[data-post-number="1"]').addClass('active');
 
 
     // console.log('setPercentageForRuler: '+this.total_SumAmount);
     // console.log(parseInt(setPercentageForRuler.toString()));
 
-    setTimeout(() => {
-   
-      let setPercentageForRuler = $('.gedf-card[data-post-number="1"]').attr('data-post-value') / this.total_SumAmount * 100;
-      $('.ruler .pointer').css({ 'left': setPercentageForRuler+'%' });
-      console.log('setPercentageForRuler ' + $('.gedf-card[data-post-number="1"]').attr('data-post-value'));
-      console.log(this.total_SumAmount);
-    }, 400);
+    // setTimeout(() => {
 
-    console.log(console.log(plt.width()))
-    console.log(console.log(plt.height()))
+    //   let setPercentageForRuler = $('.gedf-card[data-post-number="1"]').attr('data-post-value') / this.total_SumAmount * 100;
+    //   $('.ruler .pointer').css({ 'left': setPercentageForRuler+'%' });
+    //   console.log('setPercentageForRuler ' + $('.gedf-card[data-post-number="1"]').attr('data-post-value'));
+    //   console.log(this.total_SumAmount);
+    // }, 400);
+
+
+    console.log(console.log(plt.width()));
+    console.log(console.log(plt.height()));
     if (plt.height() <= 800) {
       this.lastIndex = 1;
     } else if (plt.height() <= 1200) {
@@ -210,13 +633,24 @@ export class HomePage {
 
       // this.totalAmount = this.totalAmount - 10;
       this.totalAmount = this.Data[this.currentItem].totalAmount;
+
     }
 
 
-
+console.log(  this.items)
 
 
   }
+
+  createRuler(){
+    $('.ruler').append('<div class="pointer" style="width:'+this.pointerWidth+'px"></div>');
+    for(let r = 0;r<this.NumbersOfPosts;r++){
+      let getHeight = this.Data[r].totalAmount /this. maxAmount * 100;
+      var postnumber=r+1;
+      $('.ruler').append('<div class="ruler-line" data-post-number="'+postnumber+'" style="height:'+getHeight+'%;width:'+this.pointerWidth+'px"></div>');
+    }
+  }
+
   ionViewWillEnter() {
 
 
@@ -249,29 +683,17 @@ export class HomePage {
     })
   }
 
-
+//every scroll
   onScroll(event) {
 
     let post = $('.gedf-card');
     // let totalPost = post.length;
-    //let totalPost = this.Data.length;
-    let totalPost = this.total_SumAmount;
-    let setPercentage;
-
-
-
-    if (this.currentItem == 0) {
-      setPercentage = this.Data[this.currentItem].totalAmount / totalPost * 100
-    } else {
-      setPercentage = this.Data[this.currentItem - 1].totalAmount / totalPost * 100
-    }
-
-    // console.log('Total: '+totalPost);
-    // console.log('Set Percentage: '+ this.Data[this.currentItem].totalAmount);
+    let totalPost = this.Data.length;
+    let setPercentage = 100 / totalPost + '%';
 
 
     $('.gedf-card').each(function () {
-      let positionTop = $(this).position().top;
+      let positionTop = $(this).position().top - 50;
       let positionBottom = positionTop + $(this).height();
 
       if ($('.scroll-content').scrollTop() >= positionTop && $('.scroll-content').scrollTop() <= positionBottom) {
@@ -280,25 +702,26 @@ export class HomePage {
     });
 
     let getActiveNumber = parseInt($('.gedf-card.active').attr('data-post-number'));
-    //console.log(getActiveNumber)
-
+    console.log(getActiveNumber)
     this.currentItem = getActiveNumber;
     //  let getPercentage = parseInt(100 / totalPost) * getActiveNumber + '%';
-    let getPercentage = $('.gedf-card.active').attr('data-post-value') / totalPost * 100 + '%';
+    let getPercentage = $('.ruler-line[data-post-number="'+getActiveNumber+'"]').position().left + 1;
+    //100 / totalPost * getActiveNumber + '%';
 
-    $('.ruler .pointer').css({ 'left': getPercentage });
 
-    // if ($('.scroll-content').scrollTop() > 10) {
-    //   $('.ruler').addClass('fixed');
-    //   $('.ruler .pointer').css({ 'left': getPercentage });
-    // }
-    // else {
-    //   $('.ruler').removeClass('fixed');
-    //   $('.ruler .pointer').css({ 'left': 0 });
-    // }
+
+    if ($('.scroll-content').scrollTop() > 10) {
+      $('.ruler').addClass('fixed');
+      $('.ruler .pointer').css({ 'left': getPercentage });
+    }
+    else {
+      $('.ruler').removeClass('fixed');
+      $('.ruler .pointer').css({ 'left': 0 });
+    }
 
   }
 
+//only for do more load data
   doInfinite(infiniteScroll) {
     console.log('Begin async operation');
 
@@ -321,7 +744,12 @@ export class HomePage {
         //   this.totalAmount=0;
         // }
 
-        this.totalAmount = this.Data[this.currentItem - 1].totalAmount;
+        if (this.currentItem == 0) {
+          this.totalAmount = this.Data[this.currentItem].totalAmount;
+        } else {
+          this.totalAmount = this.Data[this.currentItem - 1].totalAmount;
+        }
+
 
 
 

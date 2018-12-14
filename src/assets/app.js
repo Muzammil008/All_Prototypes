@@ -31,11 +31,8 @@
   // var totalPost = post.length;
   // var setPercentage = parseInt(100/totalPost)+'%';
 
-$(window).on('load resize', function() {
-    $('.ruler').empty();
-    createRuler();
-});
 
+/*
 function createRuler() {
 
   // Add Active Class
@@ -49,21 +46,22 @@ function createRuler() {
   //     $('.ruler .pointer').css({'left':setPercentage});
   // },500);
 
-  var $ruler = $('.ruler');
-  $ruler.append('<div class="pointer"></div>');
-  for (var i = 0, step = 0; i < $ruler.innerWidth() / 5; i++, step++) {
-      var $tick = $('<div>');
-      if (step == 0) {
-          $tick.addClass('tickLabel').html(i * 5) ;
-      } else if ([1, 3, 5, 7, 9].indexOf(step) > -1) {
-          $tick.addClass('tickMinor');
-          if (step == 9) {
-              step = -1;
-          }
-      } else {
-          $tick.addClass('tickMajor');
-      }
-      $ruler.append($tick);
-  }
+//    var $ruler = $('.ruler');
+  //  $ruler.append('<div class="pointer"></div>');
+//   for (var i = 0, step = 0; i < $ruler.innerWidth() / 5; i++, step++) {
+//       var $tick = $('<div>');
+//       if (step == 0) {
+//           $tick.addClass('tickLabel').html(i * 5) ;
+//       } else if ([1, 3, 5, 7, 9].indexOf(step) > -1) {
+//           $tick.addClass('tickMinor');
+//           if (step == 9) {
+//               step = -1;
+//           }
+//       } else {
+//           $tick.addClass('tickMajor');
+//       }
+//       $ruler.append($tick);
+//   }
 }
 
+*/
