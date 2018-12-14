@@ -553,7 +553,6 @@ export class HomePage {
     // Sum of All Items Amount
     for (var i = 0; i < this.Data.length; i++) {
       this.total_SumAmount = this.total_SumAmount + this.Data[i].totalAmount;
-
     }
 
     // Get Max Value for totalAmount
@@ -574,6 +573,8 @@ export class HomePage {
     setTimeout(()=>{
       $('.ruler').empty();
       this.createRuler();
+      //set Ruler Position
+      $('.ruler').css({'marginLeft': 0 });
     },400);
     
     
@@ -668,10 +669,16 @@ console.log(  this.items)
           // console.log(this.currentItem);
 
           this.totalAmount = this.Data[this.currentItem - 1].totalAmount;
+          this.rulerCalc('up');
+          console.log('Doing up!!!');
 
 
+        } else if (data.directionY == 'down'){
 
-        } else {
+          this.rulerCalc('down');
+          console.log('Doing Down!!!');
+
+        }else {
           if (this.items.length == 12) {
             this.totalAmount = this.Data[this.currentItem - 1].totalAmount;
             // this.totalAmount = this.totalAmount - this.Data[this.currentItem - 1].Points;
@@ -687,11 +694,10 @@ console.log(  this.items)
   onScroll(event) {
 
     let post = $('.gedf-card');
-    // let totalPost = post.length;
     let totalPost = this.Data.length;
     let setPercentage = 100 / totalPost + '%';
 
-
+    // Get Active Class for Currnt Post
     $('.gedf-card').each(function () {
       let positionTop = $(this).position().top - 50;
       let positionBottom = positionTop + $(this).height();
@@ -701,15 +707,12 @@ console.log(  this.items)
       }
     });
 
+    // For Ruler Caculation
     let getActiveNumber = parseInt($('.gedf-card.active').attr('data-post-number'));
-    console.log(getActiveNumber)
     this.currentItem = getActiveNumber;
-    //  let getPercentage = parseInt(100 / totalPost) * getActiveNumber + '%';
     let getPercentage = $('.ruler-line[data-post-number="'+getActiveNumber+'"]').position().left + 1;
-    //100 / totalPost * getActiveNumber + '%';
-
-
-
+    
+    // On scrolling set active class
     if ($('.scroll-content').scrollTop() > 10) {
       $('.ruler').addClass('fixed');
       $('.ruler .pointer').css({ 'left': getPercentage });
@@ -718,6 +721,53 @@ console.log(  this.items)
       $('.ruler').removeClass('fixed');
       $('.ruler .pointer').css({ 'left': 0 });
     }
+
+    
+
+  }
+
+  rulerCalc(position) {
+
+   // this.linesPerScreen //= 44;
+   // this.pointerWidth //= ( this.screenWidth / this.linesPerScreen )  - 1.2;
+   // this.activePostNumber // = $('.gedf-card.active').attr('data-post-number');
+    let getPos = parseFloat($('.ruler').css('marginLeft'));
+    let halfScreen = $(window).width() / 4;
+    let pointers = Math.floor(this.pointerWidth * 8);
+    let getActiveNumber = parseInt($('.gedf-card.active').attr('data-post-number'));
+    let applyPos;
+    let minLines = this.linesPerScreen - 8;
+
+    console.log('Lines/Screen : ' + this.linesPerScreen);
+
+      // Motion of Ruler
+      if(position === 'up'){
+        if( getActiveNumber % 12 == 0 ){
+          applyPos = getPos + pointers;
+          $('.ruler').css({'marginLeft': applyPos });
+        }
+        else if(this.NumbersOfPosts == getActiveNumber && getActiveNumber > minLines){
+          applyPos = getPos + pointers;
+          $('.ruler').css({'marginLeft': applyPos });
+        }
+      }
+      else if(position === 'down'){
+        if( getActiveNumber % 8 == 0 && getActiveNumber > minLines){
+          applyPos = getPos - pointers
+          $('.ruler').css({'marginLeft': applyPos });
+        }
+      }
+
+      
+
+      //console.log(typeof getActiveNumber);
+      //console.log(typeof position);
+      let mod = getActiveNumber % 10 == 0;
+      console.log('Modulas: '+ mod);
+      console.log('pointers: '+ pointers);
+      console.log('getActiveNumber: '+getActiveNumber);
+      console.log('Get Pos: '+ getPos);
+      console.log('Apply Position: '+ applyPos);
 
   }
 
