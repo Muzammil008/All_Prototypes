@@ -30,7 +30,7 @@
           </div>
           <div class="col-md-6 gedf-main"   >
 
-            <ion-card  class="card gedf-card" *ngFor="let items of items   ;let i = index;" [attr.data-post-number]="i+1" [attr.data-post-value]="items.totalAmount">
+            <ion-card  class="card gedf-card" *ngFor="let items of items;let i = index;" [attr.data-post-number]="i+1" [attr.data-post-value]="items.totalAmount">
               <img [src]="items.imgUrl"  [alt]="items.imgUrl"/>
               <ion-card-content >
                 <ion-card-title>

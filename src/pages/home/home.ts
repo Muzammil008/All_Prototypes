@@ -644,16 +644,24 @@ console.log(  this.items)
   }
 
   createRuler(){
+
     $('.ruler').append('<div class="pointer" style="width:'+this.pointerWidth+'px"></div>');
     for(let r = 0;r<this.NumbersOfPosts;r++){
       let getHeight = this.Data[r].totalAmount /this. maxAmount * 100;
       var postnumber=r+1;
       $('.ruler').append('<div class="ruler-line" data-post-number="'+postnumber+'" style="height:'+getHeight+'%;width:'+this.pointerWidth+'px"></div>');
     }
+
+    $('.ruler-line').each(function(i){
+      let index = i + 1;
+      if(index % 8 == 0){
+        $(this).addClass('brige');
+      }
+    });    
+    
   }
 
   ionViewWillEnter() {
-
 
     console.log("call method")
     this.content.ionScrollEnd.subscribe((data) => {
@@ -716,6 +724,13 @@ console.log(  this.items)
     if ($('.scroll-content').scrollTop() > 10) {
       $('.ruler').addClass('fixed');
       $('.ruler .pointer').css({ 'left': getPercentage });
+      $('.ruler-line').each(function(i){
+        if( getActiveNumber == parseInt($(this).attr('data-post-number')) )
+        {
+          $(this).addClass('active').siblings().removeClass('active');
+        }
+      });
+      
     }
     else {
       $('.ruler').removeClass('fixed');
@@ -741,22 +756,35 @@ console.log(  this.items)
     console.log('Lines/Screen : ' + this.linesPerScreen);
 
       // Motion of Ruler
+      // if(position === 'up'){
+      //   if( this.NumbersOfPosts == getActiveNumber && getActiveNumber > this.linesPerScreen || getActiveNumber % 8 == 0 && getActiveNumber > minLines ){
+      //     applyPos = getPos + pointers;
+      //     $('.ruler').css({'marginLeft': applyPos });
+      //   }
+      // }
+      // else if(position === 'down'){
+      //   if( getActiveNumber % 8 == 0 && getActiveNumber > minLines && getActiveNumber !== this.NumbersOfPosts){
+      //     applyPos = getPos - pointers
+      //     $('.ruler').css({'marginLeft': applyPos });
+      //   }
+      // }
+
       if(position === 'up'){
-        if( getActiveNumber % 12 == 0 ){
-          applyPos = getPos + pointers;
-          $('.ruler').css({'marginLeft': applyPos });
-        }
-        else if(this.NumbersOfPosts == getActiveNumber && getActiveNumber > minLines){
-          applyPos = getPos + pointers;
+        //if($('.ruler-line.brige').hasClass('active') &&  getActiveNumber > minLines && this.NumbersOfPosts !== getActiveNumber )
+        if($('.ruler-line.brige').hasClass('active') && this.NumbersOfPosts !== getActiveNumber )
+        {
+          applyPos = ((getPos + pointers) > 0) ? applyPos = 0 : getPos + pointers;
           $('.ruler').css({'marginLeft': applyPos });
         }
       }
       else if(position === 'down'){
-        if( getActiveNumber % 8 == 0 && getActiveNumber > minLines){
+        if($('.ruler-line.brige').hasClass('active') &&  getActiveNumber > minLines && this.NumbersOfPosts !== getActiveNumber )
+        {
           applyPos = getPos - pointers
           $('.ruler').css({'marginLeft': applyPos });
         }
       }
+
 
       
 
