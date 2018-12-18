@@ -1,7 +1,8 @@
+
 <ion-header>
     <ion-navbar>
       <ion-title>
-        Ionic POST {{totalAmount | currency : 'USD'}}  
+       <h1> {{totalAmount | currency : ' AED'}}  </h1>
       </ion-title>
     </ion-navbar>
     <ion-segment [(ngModel)]="icons" color="secondary">
@@ -34,8 +35,9 @@
               <img [src]="items.imgUrl"  [alt]="items.imgUrl"/>
               <ion-card-content >
                 <ion-card-title>
-                  {{items.Name}}  {{ i + 1}}
+                  {{items.Name}}       {{items.Points | currency : ' AED'}}  
                   </ion-card-title>
+               
                 <p>
                   The most popular industrial group ever, and largely
                   responsible for bringing the music to a mass audience.
@@ -67,4 +69,3 @@
 </ion-infinite-scroll>
 </ion-content>
 
-  
