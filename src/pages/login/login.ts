@@ -46,11 +46,11 @@ export class LoginPage {
     $('.ion-fab').toggleClass('active');
 
     if( $('.overlay').css('display') == 'none' ){
-      $('.overlay').fadeIn(300);
+      $('.overlay').fadeIn(600);
     }
     else
     {
-      $('.overlay').fadeOut(300);
+      $('.overlay').fadeOut(600);
     }
 
     if(this.checkIcon==false){

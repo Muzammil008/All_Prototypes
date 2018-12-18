@@ -103,3 +103,12 @@
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
 }
+
+ion-navbar.toolbar, ion-navbar.toolbar * {
+    background-color: #87e69d;
+    color: #fff;
+}
+
+#ion-diagnostics-toast{
+    top:8px;
+}
