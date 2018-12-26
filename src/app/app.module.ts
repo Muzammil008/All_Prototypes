@@ -20,7 +20,8 @@ import { CardIO } from '@ionic-native/card-io';
 import { CardIoPage } from '../pages/card-io/card-io';
 import { ReversePipe } from '../pipes/reverse/reverse';
 import { ChartModule} from 'angular2-highcharts';
-
+import { Contacts } from '@ionic-native/contacts';
+import { ContactListPage } from '../pages/contact-list/contact-list';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ChartModule} from 'angular2-highcharts';
     VisapagePage,
     QrReaderPage,
     CardIoPage,
-    ReversePipe
+    ReversePipe,
+    ContactListPage,
   ],
   imports: [
     BrowserModule,HttpModule,FormsModule,ScrollEventModule,NgQRCodeReaderModule,
@@ -47,11 +49,12 @@ import { ChartModule} from 'angular2-highcharts';
     CardsliderPage,
     VisapagePage,
     QrReaderPage,
-    CardIoPage
+    CardIoPage,
+    ContactListPage
   ],
   providers: [
     StatusBar,
-    SplashScreen,Camera,CardIO,
+    SplashScreen,Camera,CardIO,Contacts,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     CommunicatorProvider
   ]

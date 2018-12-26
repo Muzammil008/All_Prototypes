@@ -1,0 +1,26 @@
+page-contact-list {
+    .contact img {
+        border-radius: 100%;
+    }
+    ion-row.contact.row {
+        border-bottom: 1px #5b5b5b solid;
+        padding: 10px 0px;
+    }
+    p {
+        margin: 0px;
+    }
+    ion-col.icon.col {
+        text-align: right;
+    }
+    .icon ion-icon.icon.icon-md.ion-ios-call {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .icon ion-icon.icon.icon-ios.ion-ios-call {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    ion-col.detail.col {
+        padding-top: 12px;
+    }
+}

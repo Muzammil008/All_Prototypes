@@ -7,6 +7,7 @@ import { VisapagePage } from '../visapage/visapage';
 
 import { QrReaderPage } from '../qr-reader/qr-reader';
 import { CardIoPage } from '../card-io/card-io';
+import { ContactListPage } from '../contact-list/contact-list';
 declare var $: any;
 
 @Component({
@@ -893,5 +894,9 @@ var that=this;
 
   gotoQrReader() {
     this.navCtrl.push(QrReaderPage)
+  }
+
+  gotoContactList(){
+    this.navCtrl.push(ContactListPage)
   }
 }
