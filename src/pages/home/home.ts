@@ -8,6 +8,7 @@ import { VisapagePage } from '../visapage/visapage';
 import { QrReaderPage } from '../qr-reader/qr-reader';
 import { CardIoPage } from '../card-io/card-io';
 import { ContactListPage } from '../contact-list/contact-list';
+import { AnimateIconsPage } from '../animate-icons/animate-icons';
 declare var $: any;
 
 @Component({
@@ -898,5 +899,8 @@ var that=this;
 
   gotoContactList(){
     this.navCtrl.push(ContactListPage)
+  }
+  gotoAnimateIcon(){
+    this.navCtrl.push(AnimateIconsPage)
   }
 }

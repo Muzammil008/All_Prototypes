@@ -1,4 +1,8 @@
 page-contact-list {
+    ion-header{
+        position: relative;
+    }
+
     .contact img {
         border-radius: 100%;
     }
@@ -23,4 +27,91 @@ page-contact-list {
     ion-col.detail.col {
         padding-top: 12px;
     }
+    .headertext p {
+        font-size: 25px;
+        text-align: center;
+        width: 56%;
+        margin: 0 auto;
+        padding-bottom: 20px;
+        font-weight: 500;
+        padding-top: 20px;
+    }
+    .type {
+        border: 1px #5b5b5b solid;
+        border-radius: 12px;
+        padding: 20px;
+        text-align: center;
+    }
+    .type {
+        border: 1px #5b5b5b solid;
+        border-radius: 12px;
+        padding: 20px;
+        text-align: center;
+        color: #5b5b5b;
+        font-size: 14px;
+    }
+    .trans {
+        text-align: center;
+        padding: 5px 25px;
+        
+    }
+    .trans ion-icon.icon {
+        font-size: 50px;
+        color: #5b5b5b;
+    }
+  
+    .ed p{
+        font-size: 16px;
+        color: #5b5b5b;
+        font-weight: 600;
+    }
+    .trans p {
+        font-size: 16px;
+        width: 91%;
+        margin: 0 auto;
+        padding-top: 10px;
+        color: #5b5b5b;
+        font-weight: 600;
+    }
+    .center ion-icon.icon {
+        font-size: 30px;
+        color: #5b5b5b;
+    }
+    .header .type {
+        margin-top: 20px;
+    }
+    ion-col.center.col {
+        text-align: center;
+        padding: 20px;
+        margin-bottom: 10px;
+    }
+    ion-navbar#second-header {
+        position: relative;
+        top: 57%;
+    }
+
+
+    
+      .scroll-content {
+        // How far down does the content begin
+        padding-top: 10vh !important;
+        // Needs to be transparent so we see the fixed-content image-background
+        background-color: transparent;
+      }
+    
+      ion-navbar#second-header {
+        .toolbar-background {
+          opacity: 0;
+        }
+    
+        .toolbar-title {
+          font-size: 3rem !important;
+          text-align: center !important;
+          color: color($colors, primary-color-text);
+        }
+      }
+}
+
+animated-header #fixed-menu-button {
+    background-color: rgba(255, 255, 255, 1);
 }

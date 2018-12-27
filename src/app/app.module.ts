@@ -22,6 +22,8 @@ import { ReversePipe } from '../pipes/reverse/reverse';
 import { ChartModule} from 'angular2-highcharts';
 import { Contacts } from '@ionic-native/contacts';
 import { ContactListPage } from '../pages/contact-list/contact-list';
+import {AnimatedHeaderComponentClass} from "../components/animated-header/animated-header.component";
+import { AnimateIconsPage } from '../pages/animate-icons/animate-icons';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,8 @@ import { ContactListPage } from '../pages/contact-list/contact-list';
     CardIoPage,
     ReversePipe,
     ContactListPage,
+    AnimateIconsPage,
+    AnimatedHeaderComponentClass
   ],
   imports: [
     BrowserModule,HttpModule,FormsModule,ScrollEventModule,NgQRCodeReaderModule,
@@ -50,7 +54,8 @@ import { ContactListPage } from '../pages/contact-list/contact-list';
     VisapagePage,
     QrReaderPage,
     CardIoPage,
-    ContactListPage
+    ContactListPage,
+    AnimateIconsPage
   ],
   providers: [
     StatusBar,

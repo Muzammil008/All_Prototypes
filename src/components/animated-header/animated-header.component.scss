@@ -1,0 +1,97 @@
+$animationSpeed: 00ms;
+$opacitySpeed: 30ms;
+
+animated-header {
+
+  ion-header {
+    opacity: 0;
+
+    //-webkit-transition: opacity $opacitySpeed ease-in-out;
+    //-ms-transition: opacity $opacitySpeed ease-in-out;
+    //-moz-transition: opacity $opacitySpeed ease-in-out;
+    //transition: opacity $opacitySpeed ease-in-out;
+
+    .toolbar {
+      padding-top: 11px !important;
+    }
+  }
+  ion-header.visible {
+    opacity: 1;
+  }
+
+  ion-header ion-title {
+    opacity: 0;
+
+    //-webkit-transition: all $animationSpeed ease-in-out;
+    //-webkit-transform: translate(0px, 15px) !important;
+    //-ms-transition: all $animationSpeed ease-in-out;
+   // -ms-transform: translate(40px, 15px);
+   // -moz-transition: all $animationSpeed ease-in-out;
+   // -moz-transform: translate(40px, 15px);
+   // transition: all $animationSpeed ease-in-out;
+   // transform: translate(40px, 15px);
+
+  }
+  ion-header ion-title.animate {
+    opacity: 1;
+
+    -webkit-transform: translate(0px, 0px) !important;
+    -ms-transform: translate(0px, 0px);
+    -moz-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+
+  }
+
+  // Some iOS overrides
+  .toolbar-ios {
+    min-height: 56px;
+
+    ion-title {
+      padding-left: 10px !important;
+    }
+
+    .toolbar-title-ios {
+      text-align: left;
+    }
+  }
+  #fixed-menu-button {
+    .button-ios {
+      margin-top: -0.6rem;
+    }
+  }
+  .notvisible {
+    display: none !important;
+}
+  #fixed-menu-button {
+    top: 0px;
+    position: absolute;
+    z-index: 999;
+    background-color: rgba(0, 0, 255, 0);
+    width: 100%;
+    padding: 10px 20px 20px;
+    > button {
+      background-color: rgba(0, 0, 255, 0) !important;
+      box-shadow: none !important;
+      -webkit-box-shadow: none !important;
+    }
+    ion-icon {
+      //color: color($colors, primary-color-text) !important;
+    }
+  }
+  #fixed-menu-button.visible {
+    ion-icon {
+      color: inherit !important;
+    }
+  }
+
+
+
+  ion-content {
+    .fixed-content {
+      margin-top: 0 !important;
+      background: #fff;
+    }
+  }
+
+ 
+}

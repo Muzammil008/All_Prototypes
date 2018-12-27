@@ -14,7 +14,16 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+$black-color:#1A1919;
+$white-color:#F8F8F8;
+$green-color:#C3D500;
+$gary-color:#302F2F;
 
+$font-color:#cacaca;
+
+$fontsize-p:14px;
+$fontsize-heading:16px;
+$fontsize-bigheading:25px;
 .ruler {
     /* position: absolute;
     top:0; left:0; */
