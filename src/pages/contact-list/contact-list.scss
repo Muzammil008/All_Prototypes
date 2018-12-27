@@ -1,6 +1,14 @@
 page-contact-list {
     ion-header{
         position: relative;
+
+        &.visible{
+
+            .toolbar-content{
+                
+            }
+
+        }
     }
 
     .contact img {
