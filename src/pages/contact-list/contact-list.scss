@@ -1,12 +1,175 @@
 page-contact-list {
+    .scroll-content{
+        .back-button{
+            display: none;
+        }
+    }
+
     ion-header{
         position: relative;
+        background-color: #fff;
+        
+
+        .headertext *{
+            color: #6bab7a !important;
+            padding-right: 60px;
+            padding-left: 0px;
+            
+            p {
+                font-size: 25px;
+                text-align: center;
+                //width: 56%;
+                margin: 0 auto;
+                padding-bottom: 10px;
+                font-weight: 500;
+                padding-top: 10px;
+                color: #6bab7a;
+            }
+        }
+
+
+        .back-button{
+            //position: absolute;
+        }
+
+        .center ion-icon.icon{
+            color: #6bab7a;
+        }
+
+        &.header ion-navbar.toolbar, 
+        &.header ion-navbar.toolbar *{
+            background-color: #fff;
+            color: #5b5b5b;
+            
+        }
+
+        .utiles{
+            p{
+                color: #6bab7a;
+            }
+        }
+
+        &.header{
+
+            &.beforeChanged{
+                .utiles{
+                    ion-col{
+                        flex: 50%;
+                        // -webkit-transition: all 1s ease-in;
+                        // transition: all 1s ease-in;
+                        padding: 5px 30px;
+                    }
+                    p{
+                        // opacity: 1;
+                        // -webkit-transition: all 0.1s ease-in;
+                        // transition: all 0.1s ease-in;
+                        -webkit-transition: opacity 2.0s, font-size 0.2s ease-in;
+                        -moz-transition: opacity 2.0s, font-size 0.2s ease-in;
+                        -o-transition: opacity 2.0s, font-size 0.2s ease-in;
+                        opacity: 1;
+                        font-size: 14px;
+                    }
+                }
+                .center ion-icon.icon{
+                    font-size: 80px;
+                    // -webkit-transition: all 0.1s ease-in;
+                    // transition: all 0.1s ease-in;
+                    animation: iconsizeZoomIn 0.2s linear;
+                    -webkit-animation: iconsizeZoomIn 0.2s linear;
+                    
+                }
+            }
+
+            &.changed{
+                ion-navbar.toolbar, ion-navbar.toolbar *{
+                    // background-color: #87e69d;
+                    // color: #fff;
+                }
+                .utiles{
+                    ion-col{
+                        flex: 25%;
+                        // -webkit-transition: all 1s ease-in;
+                        // transition: all 1s ease-in;
+                    }
+                    p{
+                        // opacity: 0;
+                        // -webkit-transition: all 0.1s ease-in;
+                        // transition: all 0.1s ease-in;
+                        -webkit-transition: opacity 2.0s, font-size 0.2s ease-out;
+                        -moz-transition: opacity 2.0s, font-size 0.2s ease-out;
+                        -o-transition: opacity 2.0s, font-size 0.2s ease-out;
+                        opacity: 0;
+                        font-size: 0px;
+                    }
+                }
+                .center ion-icon.icon{
+                    // -webkit-transition: all 1s ease-in;
+                    // transition: all 1s ease-in;
+                    animation: iconsizeZoomIn 0.2s linear;
+                    -webkit-animation: iconsizeZoomIn 0.2s linear;
+                    
+                }              
+            }
+            
+        }
+
 
         &.visible{
 
             .toolbar-content{
                 
             }
+
+            ion-title{
+                opacity: 1 !important;
+            }
+
+            .type{
+                margin: 10px 0;
+            }
+
+            .toolbar{
+                padding-top: 4px !important;
+            }
+
+            ion-col.center.col{
+                margin-bottom: 0px;
+                color: #fff;
+            }
+
+            ion-icon.icon{
+                color: #fff;
+            }
+        }
+        *{
+            -webkit-transition: all 0.5s ease-in;
+                transition: all 0.5s ease-in;
+        }
+        &:not(.visible){
+            .trans{
+                // animation: bounce 1s linear;
+                // -webkit-animation: bounce 1s linear;
+            }
+        }
+    }
+
+    .scroll-content{
+       //padding-top: 350px!important;
+       //padding-bottom: 160px!important;
+    }
+
+    #fixed-menu-button{
+        *{
+            -webkit-transition: all 0.5s ease-in;
+                transition: all 0.5s ease-in;
+        }
+
+        &.notvisible{
+            *{
+                opacity: 0;
+            }
+        }
+        &:not(.notvisible){
 
         }
     }
@@ -15,7 +178,7 @@ page-contact-list {
         border-radius: 100%;
     }
     ion-row.contact.row {
-        border-bottom: 1px #5b5b5b solid;
+        border-bottom: 1px #ddd solid;
         padding: 10px 0px;
     }
     p {
@@ -23,6 +186,7 @@ page-contact-list {
     }
     ion-col.icon.col {
         text-align: right;
+        color: #6bab7a;
     }
     .icon ion-icon.icon.icon-md.ion-ios-call {
         font-size: 30px;
@@ -35,32 +199,24 @@ page-contact-list {
     ion-col.detail.col {
         padding-top: 12px;
     }
-    .headertext p {
-        font-size: 25px;
-        text-align: center;
-        width: 56%;
-        margin: 0 auto;
-        padding-bottom: 20px;
-        font-weight: 500;
-        padding-top: 20px;
+    
+    .type {
+        // border: 1px #5b5b5b solid;
+        // border-radius: 12px;
+        // padding: 20px;
+        // text-align: center;
     }
     .type {
-        border: 1px #5b5b5b solid;
-        border-radius: 12px;
+        border: 1px #87e69d solid;
+        border-radius: 4px;
         padding: 20px;
         text-align: center;
-    }
-    .type {
-        border: 1px #5b5b5b solid;
-        border-radius: 12px;
-        padding: 20px;
-        text-align: center;
-        color: #5b5b5b;
+        color: #6bab7a;
         font-size: 14px;
     }
     .trans {
         text-align: center;
-        padding: 5px 25px;
+        padding: 5px 8px;
         
     }
     .trans ion-icon.icon {
@@ -86,23 +242,23 @@ page-contact-list {
         color: #5b5b5b;
     }
     .header .type {
-        margin-top: 20px;
+        margin: 0 0 10px 0;
     }
     ion-col.center.col {
         text-align: center;
-        padding: 20px;
-        margin-bottom: 10px;
+        padding: 5px;
+        //margin-bottom: 10px;
     }
     ion-navbar#second-header {
         position: relative;
-        top: 57%;
+        //top: 57%;
     }
 
 
     
       .scroll-content {
         // How far down does the content begin
-        padding-top: 10vh !important;
+        //padding-top: 10vh !important;
         // Needs to be transparent so we see the fixed-content image-background
         background-color: transparent;
       }
@@ -122,4 +278,67 @@ page-contact-list {
 
 animated-header #fixed-menu-button {
     background-color: rgba(255, 255, 255, 1);
+}
+
+@keyframes bounce {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(-15px);
+    }
+  }
+  @-webkit-keyframes bounce {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(-15px);
+    }
+  }
+
+@keyframes iconsizeZoomIn {
+    0% {
+        font-size: 30px;
+    }
+    50% {
+    font-size: 50px;
+    }
+    100% {
+        font-size: 80px;
+    }
+}
+@-webkit-keyframes iconsizeZoomIn {
+    0% {
+        font-size: 30px;
+    }
+    50% {
+    font-size: 50px;
+    }
+    100% {
+        font-size: 80px;
+    }
+}
+
+@keyframes iconsizeZoomOut {
+    0% {
+        font-size: 80px;
+    }
+    50% {
+    font-size: 50px;
+    }
+    100% {
+        font-size: 30px;
+    }
+}
+@-webkit-keyframes iconsizeZoomOut {
+    0% {
+        font-size: 80px;
+    }
+    50% {
+    font-size: 50px;
+    }
+    100% {
+        font-size: 30px;
+    }
 }
