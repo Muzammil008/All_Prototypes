@@ -1,0 +1,131 @@
+page-statements {
+    ion-col.star-right.col {
+        text-align: right;
+        color: #920300;
+    }
+    .card-md {
+        margin: 10px;
+        border-radius: 2px;
+        width: calc(100% - 20px);
+        font-size: 1.4rem;
+        background: #fff;
+       // -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+       // box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    }
+    .card-md {
+        margin: 10px;
+        border-radius: 2px;
+        width: calc(100% - 20px);
+        font-size: 1.4rem;
+        background: #fff;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+    .card img {
+        border-radius: 12px;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+        height: 400px;
+    }
+    //popup
+
+
+   
+    .show {
+        z-index: 99999999;
+        display: none;
+        position: absolute;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.59);
+        height: 100%;
+    }
+
+.show .overlay{
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/imgs/IMG_1072.JPG);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-repeat: repeat-x;
+
+	animation: animatedBackground 10s linear infinite;
+}
+@keyframes animatedBackground {
+	from { background-position: 0 0; }
+	to { background-position: 100% 0; }
+}
+.show .img-show{
+    width: 74%;
+    height: 200px;
+    background: #FFF;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+.close span{
+    position: absolute;
+    top: 18px;
+    left: 10px;
+    z-index: 99;
+    cursor: pointer;
+    font-size: 20px;
+    color: #fff;
+    //background: #fff;
+    width: 40px;
+    text-align: center;
+    height: 40px;
+    line-height: 41px;
+    border-radius: 100%;
+}
+.img-show img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.box-content.ng-trigger.ng-trigger-itemState {
+    position: absolute;
+    margin: 0px 30px;
+    bottom: 0;
+}
+h2.child {
+    font-size: 40px;
+    color: #fff;
+    width: 75%;
+}
+p.child {
+    font-size: 20px;
+    color: #fff;
+}
+hr.line {
+    background: #fff;
+    height: 5px;
+    width: 30%;
+    margin: 0;
+}
+.explore p {
+    font-size: 30px;
+    margin: 0px;
+    padding-left: 15px;
+}
+.search ion-icon {
+    font-size: 30px;
+}
+.search {
+    text-align: right;
+    margin-right: 15px;
+}
+.toolbar-background-md {
+    border-color: #b2b2b2;
+    background: #fff;
+}
+.toolbar-background-ios {
+    border-color: #b2b2b2;
+    background: #fff;
+}
+}

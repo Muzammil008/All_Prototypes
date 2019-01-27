@@ -1,0 +1,158 @@
+page-blockcard {
+
+    ion-content{
+        .scroll-content{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }        
+    }
+
+}
+
+$loader-bg: #151cea;
+$success: #008000;
+
+.block-loader{
+    padding: 10px;
+    border-radius: 35px;
+    background-color: $loader-bg;
+    color: #fff;
+    width: 150px;
+    height: 56px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+
+    .wrap {
+        height: 36px;
+        width: 100%;
+        overflow: hidden;
+        > *{
+            transition: all .2s ease-in-out;
+        }
+    }
+
+    .block-loader--icon {
+        background-color: #fff;
+        color: $loader-bg;
+        text-align: center;
+        margin-right: 10px;
+        width: 36px;
+        display: inline-block;
+        vertical-align: middle;
+        height: 36px;
+        border-radius: 50%;
+        line-height: 40px;
+        overflow: hidden;
+        position: relative;
+        .activate-icon--before{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            transition: all .2s ease-in-out;
+        }
+        .activate-icon--after {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 100%;
+            transition: all .2s ease-in-out;
+        }
+    }
+
+    .block-loader--text {
+        font-size: 16px;
+        line-height: 36px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    &.activate{
+       
+    }
+
+    &.waiting:not(.activated){
+        .wrap > * {
+            transform: translateY(-36px);
+        }
+        .block-loader--icon{
+            background-color: transparent;
+            transition-property: background-color;
+            transition-delay: 0s;
+            transition-duration: 0.2s;
+        }
+        .spinning {
+            border: 2px solid #fff;
+            width: 36px;
+            height: 36px;
+            display: inline-block;
+            border-radius: 50%;
+            border-bottom: 1px solid transparent;
+
+            transition-property: border, border-bottom;
+            transition-delay: 0.1s, 0.3;
+            transition-duration: 1s, 1s;
+
+            animation: spinner 0.5s infinite;
+        }
+    }
+
+    &.activated{
+        background-color: $success;
+        transition: all .2s ease-in-out;
+        .wrap > * {
+            transform: translateY(-72px);
+        }
+        .block-loader--icon{
+            color: $success;
+        }
+    }
+
+    &:hover{
+
+        .block-loader--icon {
+            .activate-icon--before{
+                top: -100%;
+                transition: all .2s ease-in-out;
+            }
+            .activate-icon--after {
+                transform: translate(-50%,-50%);
+                top: 50%;
+                transition: all .2s ease-in-out;
+            }
+        }
+
+    }
+
+}
+
+[flex] {
+    display: flex;
+    display: -webkit-flex;
+    > * {
+        flex: auto;
+    }
+    .block-loader--icon{
+        flex: 1;
+    }
+}
+
+// Spinner Animation
+@keyframes spinner {
+    from{ transform: rotate(0deg); }
+    to{ transform: rotate(360deg); }
+}
+@-webkit-keyframes spinner {
+    from{ -webkit-transform: rotate(0deg); }
+    to{ -webkit-transform: rotate(360deg); }
+}
+@-moz-keyframes spinner {
+    from{ -moz-transform: rotate(0deg); }
+    to{ -moz-transform: rotate(360deg); }
+}
+@-o-keyframes spinner {
+    from{ -o-transform: rotate(0deg); }
+    to{ -o-transform: rotate(360deg); }
+}
+

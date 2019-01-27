@@ -1,0 +1,128 @@
+page-otp {
+
+    .viewUsers {
+        
+        ul{
+            list-style: none;
+            padding: 0px;
+            margin: 0px;
+            transform: none;
+            li{
+                position: absolute;
+                top: 66px;
+                right: 15px;
+                z-index: 90;
+                transition: all 0.4s ease-in-out;
+                &:nth-child(1){
+                    right: 65px;
+                }
+                &:nth-child(2){
+                    right: 40px;
+                }
+            }
+        }
+        a{
+            &:hover{
+                opacity: 1!important;
+            }
+        }
+        img{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            box-shadow: 0 0 15px rgba(#000,0.4);            
+        }
+
+        &.active{
+            ul{
+                li{
+                    &:nth-child(1),
+                    &:nth-child(2),
+                    &:nth-child(3){
+                        right: 274px; //calc(100vw - 120px);
+                    }
+                    &:nth-child(3){
+                        top: 226px;
+                    }
+                    &:nth-child(2){
+                        top: 172px;
+                    }
+                }
+            }
+        }
+    }
+
+    .view-pdf {
+        padding-top: 14px;
+        text-align: right;
+    }
+
+    .header-md{
+        &::after{
+            display: none;
+        }
+    }
+
+    .otp-header{
+        h1{
+            margin-bottom: 0px;
+            & + p{
+                margin-top: 0px;
+            }
+        }
+    }
+
+    .ion-page > ion-content{
+        z-index: 78;
+    }
+
+    .action-sheet {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        background-color: #ffffff;
+        padding: 20px 15px;
+        bottom: -100%;
+        box-shadow: 0 0 300px rgba(0,0,0,0.2);
+        transition: all 0.1s ease-in-out;
+        &.active{
+            bottom: 0;
+        }
+        .item-md{
+            padding: 0px;
+        }
+    }
+
+    .scroll-content{
+        overflow: hidden;
+    }
+
+    .as-buttons {
+        margin-top: 15px;
+    }
+
+    .side-menu{
+        padding: 15px;
+        .user-area {
+            margin: 53px 0 30px 25px;
+        }
+        h2{
+            color: #777;
+            font-size: 20px;
+        }
+        h3{
+            font-size: 16px;
+            margin-bottom: 0px;
+            & + p{
+                margin-top: 2px;
+            }
+        }
+        ul{
+            list-style: none;
+            padding-left: 25px;
+        }
+
+    }
+
+}
+

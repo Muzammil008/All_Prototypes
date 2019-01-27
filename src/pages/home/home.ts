@@ -561,8 +561,8 @@ export class HomePage {
   maxpoint: number=this.Data[0].Points;
 
 
-
-  constructor(public zone: NgZone, public plt: Platform, private CommunicatorProvider: CommunicatorProvider, public navCtrl: NavController) {
+  ionViewDidLoad() {
+    //alert("Did Load")
     this.maxAmount = this.Data[0].totalAmount;
 
     // Sum of All Items Amount
@@ -576,7 +576,7 @@ export class HomePage {
         this.maxAmount = this.Data[i].totalAmount;
       }
     }
-    console.log('maxAmount: ' + this.maxAmount);
+    //console.log('maxAmount: ' + this.maxAmount);
 
 
         // Get Max Value for totalPoint
@@ -585,7 +585,7 @@ export class HomePage {
             this.maxpoint = this.Data[i].Points;
           }
         }
-        console.log('maxpoint: ' + this.maxpoint);
+       // console.log('maxpoint: ' + this.maxpoint);
 
 
 
@@ -619,32 +619,30 @@ export class HomePage {
     // }, 400);
 
 
-    console.log(console.log(plt.width()));
-    console.log(console.log(plt.height()));
-    if (plt.height() <= 800) {
+    if (this.plt.height() <= 800) {
       this.lastIndex = 1;
-    } else if (plt.height() <= 1200) {
+    } else if (this.plt.height() <= 1200) {
       this.lastIndex = 2;
     }
-    else if (plt.height() <= 1400) {
+    else if (this.plt.height() <= 1400) {
       this.lastIndex = 3;
     }
-    else if (plt.height() <= 1600) {
+    else if (this.plt.height() <= 1600) {
       this.lastIndex = 3;
     }
-    else if (plt.height() <= 1800) {
+    else if (this.plt.height() <= 1800) {
       this.lastIndex = 3;
     }
-    else if (plt.height() <= 2000) {
+    else if (this.plt.height() <= 2000) {
       this.lastIndex = 4;
     }
-    else if (plt.height() <= 2200) {
+    else if (this.plt.height() <= 2200) {
       this.lastIndex = 5;
     }
     else {
       this.lastIndex = 2;
     }
-    console.log(this.lastIndex)
+    //console.log(this.lastIndex)
 
     // for (this.startIndex; this.startIndex < this.lastIndex; this.startIndex++) {
 
@@ -662,9 +660,14 @@ export class HomePage {
     }
 
 
-    console.log(this.items)
+    ///console.log(this.items)
 
 
+
+}
+
+  constructor(public zone: NgZone, public plt: Platform, private CommunicatorProvider: CommunicatorProvider, public navCtrl: NavController) {
+  
   }
 
   createRuler() {
@@ -691,7 +694,7 @@ export class HomePage {
 
     console.log("call method")
     this.content.ionScrollEnd.subscribe((data) => {
-      console.log(data)
+      //console.log(data)
       this.direction = data.directionY;
       this.zone.run(() => {
         if (data.directionY == 'up') {
@@ -704,13 +707,13 @@ export class HomePage {
 
        
           this.rulerCalc('up');
-          console.log('Doing up!!!');
+        //  console.log('Doing up!!!');
         //  this.totalAmount = this.Data[this.currentItem - 1].totalAmount;
 
         } else if (data.directionY == 'down') {
 
           this.rulerCalc('down');
-          console.log('Doing Down!!!');
+          //console.log('Doing Down!!!');
          // this.totalAmount = this.Data[this.currentItem - 1].totalAmount;
         } else {
           if (this.items.length == 12) {
@@ -733,6 +736,7 @@ export class HomePage {
 
     // Get Active Class for Currnt Post
     $('.gedf-card').each(function () {
+      console.log("Active")
       let positionTop = $(this).position().top - 50;
       let positionBottom = positionTop + $(this).height();
 
@@ -755,7 +759,8 @@ var that=this;
       $('.ruler').addClass('fixed');
       $('.ruler .pointer').css({ 'left': getPercentage });
       $('.ruler-line').each(function (i) {
-       
+       // alert("scrolling set"
+
         if (getActiveNumber == parseInt($(this).attr('data-post-number'))) {
           that.totalAmount = that.Data[getActiveNumber - 1].totalAmount;
           console.log(that.totalAmount)
@@ -774,7 +779,7 @@ var that=this;
   }
 
   rulerCalc(position) {
-
+   // alert("rulercal")
     // this.linesPerScreen //= 44;
     // this.pointerWidth //= ( this.screenWidth / this.linesPerScreen )  - 1.2;
     // this.activePostNumber // = $('.gedf-card.active').attr('data-post-number');
@@ -785,7 +790,7 @@ var that=this;
     let applyPos;
     let minLines = this.linesPerScreen - 8;
 
-    console.log('Lines/Screen : ' + this.linesPerScreen);
+    //console.log('Lines/Screen : ' + this.linesPerScreen);
 
     // Motion of Ruler
     // if(position === 'up'){
@@ -821,11 +826,11 @@ var that=this;
     //console.log(typeof getActiveNumber);
     //console.log(typeof position);
     let mod = getActiveNumber % 10 == 0;
-    console.log('Modulas: ' + mod);
-    console.log('pointers: ' + pointers);
-    console.log('getActiveNumber: ' + getActiveNumber);
-    console.log('Get Pos: ' + getPos);
-    console.log('Apply Position: ' + applyPos);
+    // console.log('Modulas: ' + mod);
+    // console.log('pointers: ' + pointers);
+    // console.log('getActiveNumber: ' + getActiveNumber);
+    // console.log('Get Pos: ' + getPos);
+    // console.log('Apply Position: ' + applyPos);
 
   }
 
@@ -833,7 +838,7 @@ var that=this;
   doInfinite(infiniteScroll) {
     console.log('Begin async operation');
 
-    console.log(infiniteScroll)
+    //console.log(infiniteScroll)
 
 
     return new Promise((resolve) => {
@@ -841,9 +846,9 @@ var that=this;
         //console.log(infiniteScroll)
 
         // var index = Math.floor(Math.random() * 12) + 0
-        console.log(this.lastIndex);
+       /// console.log(this.lastIndex);
         this.items.push(this.Data[this.lastIndex]);
-        console.log(this.items)
+       // console.log(this.items)
         this.lastIndex++;
 
         // this.totalAmount = this.totalAmount - this.Data[index].Points;

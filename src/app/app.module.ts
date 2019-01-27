@@ -24,7 +24,8 @@ import { Contacts } from '@ionic-native/contacts';
 import { ContactListPage } from '../pages/contact-list/contact-list';
 import {AnimatedHeaderComponentClass} from "../components/animated-header/animated-header.component";
 import { AnimateIconsPage } from '../pages/animate-icons/animate-icons';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { Ng2OdometerModule } from 'ng2-odometer';
 @NgModule({
   declarations: [
     MyApp,
@@ -41,8 +42,8 @@ import { AnimateIconsPage } from '../pages/animate-icons/animate-icons';
   ],
   imports: [
     BrowserModule,HttpModule,FormsModule,ScrollEventModule,NgQRCodeReaderModule,
-    HttpClientModule, ChartModule,
-    
+    HttpClientModule, ChartModule,Ng2OdometerModule.forRoot(),
+    BrowserAnimationsModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],

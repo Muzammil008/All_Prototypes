@@ -1,0 +1,192 @@
+<!--
+  Generated template for the SuccessPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>success</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-content>
+  <ion-grid>
+    <ion-row class="background-color">
+      <ion-col>
+        <div class="select-payee">
+<h2>Select Payee</h2>
+
+      <div >  
+          <div id="ddlSocial" ></div>  
+      </div>  
+     <p>Total available amount is</p>
+     <h2>4123.00</h2>
+        </div>
+        <ion-row>
+          <ion-col>
+            <div class="icon-star1">
+                <ion-icon name="star"></ion-icon>
+                <p>Favourite Payee</p>
+            </div>
+            <div class="botton-icon">
+                <button ion-button color="dark">Add New Payee</button>
+            </div>
+          </ion-col>
+          
+        </ion-row>
+       
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="ponkapUr">
+      <ion-col class="no-padding" >
+        <div class="heading">
+<h2>Recent Tansaction</h2>
+        </div>
+        <ion-row class="amout-pay">
+          <ion-col col-2>
+<div class="logo">
+<img src="../assets/imgs/logo1.png">
+</div>
+          </ion-col>
+          <ion-col col-4>
+<div class="user-name">
+
+  <h2>MSBARIRICIC</h2>
+  <p>123456789</p>
+</div>
+          </ion-col>
+          <ion-col col-3>
+<div class="amount">
+<p>$ 5000</p>
+</div>
+          </ion-col>
+          <ion-col col-3>
+<div class="repeat">
+    <button ion-button>Repeat</button>
+</div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="amout-pay">
+            <ion-col col-2>
+  <div class="logo">
+  <img src="../assets/imgs/logo2.png">
+  </div>
+            </ion-col>
+            <ion-col col-4>
+  <div class="user-name">
+  
+    <h2>MSBARIRICIC</h2>
+    <p>123456789</p>
+  </div>
+            </ion-col>
+            <ion-col col-3>
+  <div class="amount">
+  <p>$ 5000</p>
+  </div>
+            </ion-col>
+            <ion-col col-3>
+  <div class="repeat">
+      <button ion-button>Repeat</button>
+  </div>
+            </ion-col>
+          </ion-row>
+          <ion-row class="amout-pay">
+              <ion-col col-2>
+    <div class="logo">
+    <img src="../assets/imgs/logo1.png">
+    </div>
+              </ion-col>
+              <ion-col col-4>
+    <div class="user-name">
+    
+      <h2>MSBARIRICIC</h2>
+      <p>123456789</p>
+    </div>
+              </ion-col>
+              <ion-col col-3>
+    <div class="amount">
+    <p>$ 5000</p>
+    </div>
+              </ion-col>
+              <ion-col col-3>
+    <div class="repeat">
+        <button ion-button>Repeat</button>
+    </div>
+              </ion-col>
+            </ion-row>
+            <ion-row class="amout-pay">
+                <ion-col col-2>
+      <div class="logo">
+      <img src="../assets/imgs/logo2.png">
+      </div>
+                </ion-col>
+                <ion-col col-4>
+      <div class="user-name">
+      
+        <h2>MSBARIRICIC</h2>
+        <p>123456789</p>
+      </div>
+                </ion-col>
+                <ion-col col-3>
+      <div class="amount">
+      <p>$ 5000</p>
+      </div>
+                </ion-col>
+                <ion-col col-3>
+      <div class="repeat">
+          <button ion-button>Repeat</button>
+      </div>
+                </ion-col>
+              </ion-row>
+              <ion-row class="amout-pay">
+                  <ion-col col-2>
+        <div class="logo">
+        <img src="../assets/imgs/logo1.png">
+        </div>
+                  </ion-col>
+                  <ion-col col-4>
+        <div class="user-name">
+        
+          <h2>MSBARIRICIC</h2>
+          <p>123456789</p>
+        </div>
+                  </ion-col>
+                  <ion-col col-3>
+        <div class="amount">
+        <p>$ 5000</p>
+        </div>
+                  </ion-col>
+                  <ion-col col-3>
+        <div class="repeat">
+            <button ion-button>Repeat</button>
+        </div>
+                  </ion-col>
+                </ion-row>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="!ponkapUr">
+      <ion-col>
+        <div class="enter-amount">
+<p class="animated fadeIn delay-1s">Tranfer from</p>
+<p class="animated fadeInUp delay-2s">122200003344 - Master Ceationz</p>
+<p class="animated fadeIn delay-3s">Amount</p>
+
+<ion-item class="animated fadeInUp delay-4s">
+    <ion-label fixed>$</ion-label>
+    <ion-input type="number"></ion-input>
+  </ion-item>
+        </div>
+        <div class="range-button animated fadeIn">
+            <ion-range min="-20" max="100" [(ngModel)]="limit" (ionChange)="buttonslide()" debounce="100">
+              </ion-range>
+            <span>Swipe to pay</span>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+ 
+
+</ion-content>

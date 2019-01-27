@@ -14,6 +14,20 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+@import 'animate/animate';
+
+$base: #777;
+$visa-color: #5864ee;
+$master-color: #ed586d;
+
+$twitter: #249dfc;
+
+[item-left]{
+    float: left!important;
+}
+[item-right]{
+    float: right!important;
+}
 $black-color:#1A1919;
 $white-color:#F8F8F8;
 $green-color:#C3D500;
@@ -39,10 +53,7 @@ $fontsize-bigheading:25px;
     position: relative;
     white-space: nowrap;
 }
-.ruler.fixed{
-    // position: fixed;
-    // top: 0;
-}
+
 .ruler > div {
     display: inline-block;
     background: #000;

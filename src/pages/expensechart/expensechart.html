@@ -1,0 +1,227 @@
+<!--
+  Generated template for the ExpensechartPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar class="pre-navbar">
+    <ion-title>Expense Chart</ion-title>
+  </ion-navbar>
+
+  <!-- <ng-template #elseBlock>
+    <div class="toolbar toolbar-md post-navbar">
+      <button (click)="deactiveChart()" class="back-button bar-button bar-button-md back-button-md bar-button-default bar-button-default-md show-back-button go-back">
+        <span class="button-inner"><ion-icon name="arrow-back"></ion-icon></span>
+      </button>
+      <div class="toolbar-content toolbar-content-md">
+        <div class="toolbar-title toolbar-title-md">Expense Chart</div>
+      </div>
+    </div>
+</ng-template> -->
+
+</ion-header>
+
+
+<ion-content>
+
+  <div class="main-container">
+
+    <div *ngIf="expenseChart == true;">
+      <!-- *ngIf="expenseChart === true;" -->
+      <div class="expense-data">
+          <div class="expense-data--dater">
+            <ion-icon name="arrow-back" class="edd-prev"></ion-icon>
+            <span class="edd-date">August 17</span>
+            <ion-icon name="arrow-forward" class="edd-next"></ion-icon>
+          </div>
+          <div class="scroller-x">
+
+            <!-- <div *ngFor="let items of data;">
+              <div *ngFor="let expenseItem of items.expenses">
+                <div *ngFor="let yearsItems of expenseItem[0]; let i = index;">
+                  <div *ngFor="let monthItems of yearsItems.month; let j = index">
+                    <div *ngFor="let dates of yearsItems.data[k]; let k = index; ">
+                      {{ dates.expenses }}                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+
+            <div class="categories-panel">
+              <ul>
+                  <li>
+                    <span class="cp-amount">$150</span>
+                    <div class="cp-progress">
+                      <div class="cp-progress--balance" data-height="50%"></div>
+                    </div>
+                    <span class="cp-icon"><ion-icon name="boat"></ion-icon></span>
+                  </li>
+                    <li>
+                    <span class="cp-amount">$150</span>
+                    <div class="cp-progress">
+                      <div class="cp-progress--balance" data-height="80%"></div>
+                    </div>
+                    <span class="cp-icon"><ion-icon name="boat"></ion-icon></span>
+                  </li>
+                  <li>
+                    <span class="cp-amount">$150</span>
+                    <div class="cp-progress">
+                      <div class="cp-progress--balance" data-height="60%"></div>
+                    </div>
+                    <span class="cp-icon"><ion-icon name="boat"></ion-icon></span>
+                  </li>
+                  <li>
+                    <span class="cp-amount">$150</span>
+                    <div class="cp-progress">
+                      <div class="cp-progress--balance" data-height="10%"></div>
+                    </div>
+                    <span class="cp-icon"><ion-icon name="boat"></ion-icon></span>
+                  </li>
+                  <li>
+                    <span class="cp-amount">$150</span>
+                    <div class="cp-progress">
+                      <div class="cp-progress--balance" data-height="50%"></div>
+                    </div>
+                    <span class="cp-icon"><ion-icon name="boat"></ion-icon></span>
+                  </li>
+                  <li>
+                    <span class="cp-amount">$150</span>
+                    <div class="cp-progress">
+                      <div class="cp-progress--balance" data-height="80%"></div>
+                    </div>
+                    <span class="cp-icon"><ion-icon name="boat"></ion-icon></span>
+                  </li>
+                  <li>
+                    <span class="cp-amount">$150</span>
+                    <div class="cp-progress">
+                      <div class="cp-progress--balance" data-height="30%"></div>
+                    </div>
+                    <span class="cp-icon"><ion-icon name="boat"></ion-icon></span>
+                  </li>
+                  <li>
+                    <span class="cp-amount">$150</span>
+                    <div class="cp-progress">
+                      <div class="cp-progress--balance" data-height="53%"></div>
+                    </div>
+                    <span class="cp-icon"><ion-icon name="boat"></ion-icon></span>
+                  </li>
+                  <li>
+                    <span class="cp-amount">$150</span>
+                    <div class="cp-progress">
+                      <div class="cp-progress--balance" data-height="43%"></div>
+                    </div>
+                    <span class="cp-icon"><ion-icon name="boat"></ion-icon></span>
+                  </li>
+                  <li>
+                    <span class="cp-amount">$150</span>
+                    <div class="cp-progress">
+                      <div class="cp-progress--balance" data-height="23%"></div>
+                    </div>
+                    <span class="cp-icon"><ion-icon name="boat"></ion-icon></span>
+                  </li>
+                  <li>
+                    <span class="cp-amount">$150</span>
+                    <div class="cp-progress">
+                      <div class="cp-progress--balance" data-height="33%"></div>
+                    </div>
+                    <span class="cp-icon"><ion-icon name="boat"></ion-icon></span>
+                  </li>
+                  <li>
+                    <span class="cp-amount">$150</span>
+                    <div class="cp-progress">
+                      <div class="cp-progress--balance" data-height="50%"></div>
+                    </div>
+                    <span class="cp-icon"><ion-icon name="boat"></ion-icon></span>
+                  </li>
+                  <li>
+                    <span class="cp-amount">$150</span>
+                    <div class="cp-progress">
+                      <div class="cp-progress--balance" data-height="10%"></div>
+                    </div>
+                    <span class="cp-icon"><ion-icon name="boat"></ion-icon></span>
+                  </li>
+                  <li>
+                    <span class="cp-amount">$150</span>
+                    <div class="cp-progress">
+                      <div class="cp-progress--balance" data-height="81%"></div>
+                    </div>
+                    <span class="cp-icon"><ion-icon name="boat"></ion-icon></span>
+                  </li>
+                  <li>
+                    <span class="cp-amount">$150</span>
+                    <div class="cp-progress">
+                      <div class="cp-progress--balance" data-height="96%"></div>
+                    </div>
+                    <span class="cp-icon"><ion-icon name="boat"></ion-icon></span>
+                  </li>
+                  <li>
+                    <span class="cp-amount">$150</span>
+                    <div class="cp-progress">
+                      <div class="cp-progress--balance" data-height="20%"></div>
+                    </div>
+                    <span class="cp-icon"><ion-icon name="boat"></ion-icon></span>
+                  </li>
+                  <li>
+                    <span class="cp-amount">$150</span>
+                    <div class="cp-progress">
+                      <div class="cp-progress--balance" data-height="46%"></div>
+                    </div>
+                    <span class="cp-icon"><ion-icon name="boat"></ion-icon></span>
+                  </li>
+                  <li>
+                    <span class="cp-amount">$150</span>
+                    <div class="cp-progress">
+                      <div class="cp-progress--balance" data-height="16%"></div>
+                    </div>
+                    <span class="cp-icon"><ion-icon name="boat"></ion-icon></span>
+                  </li>
+                  <li>
+                    <span class="cp-amount">$150</span>
+                    <div class="cp-progress">
+                      <div class="cp-progress--balance" data-height="80%"></div>
+                    </div>
+                    <span class="cp-icon"><ion-icon name="boat"></ion-icon></span>
+                  </li>
+                  <li>
+                    <span class="cp-amount">$150</span>
+                    <div class="cp-progress">
+                      <div class="cp-progress--balance" data-height="3%"></div>
+                    </div>
+                    <span class="cp-icon"><ion-icon name="boat"></ion-icon></span>
+                  </li>
+                  <li>
+                    <span class="cp-amount">$150</span>
+                    <div class="cp-progress">
+                      <div class="cp-progress--balance" data-height="8%"></div>
+                    </div>
+                    <span class="cp-icon"><ion-icon name="boat"></ion-icon></span>
+                  </li> 
+              </ul>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <div class="scrolling-area">
+        <div *ngFor="let items of data" class="card" (click)="activeChart()" [ngClass]="items.cardType" [attr.data-cardId]="items.id" [attr.data-animation]="items.animation">
+          <div class="wrap animated">
+              <span class="card--name">{{items.card}}</span>
+              <hr>
+              <div class="card--last-transaction">
+                Last Transaction {{items.lastTransaction}} ago
+                <ion-icon name="arrow-dropright-circle"></ion-icon>
+              </div>
+          </div>
+          <div class="card--current-balance">
+            <span class="ccb---text">Current Balance</span>
+            <span class="ccb---value">${{items.currentBalance}}</span>
+          </div>
+        </div>
+    </div>
+     
+  </div>
+
+</ion-content>

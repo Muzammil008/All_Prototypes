@@ -5,20 +5,7 @@
        <h1> {{totalAmount | currency : ' AED'}}  </h1>
       </ion-title>
     </ion-navbar>
-    <ion-segment [(ngModel)]="icons" color="secondary">
-      <ion-segment-button value="gotoVisa" (ionSelect)="gotoVisa()">
-        <!-- <ion-icon name="camera">Login</ion-icon> -->
-       VISA CARD
-      </ion-segment-button>
-      <ion-segment-button value="gotoContactList" (ionSelect)="gotoContactList()">
-        <!-- <ion-icon name="bookmark">Slider</ion-icon> -->
-        Contact List
-      </ion-segment-button>
-      <ion-segment-button value="animateicon" (ionSelect)="gotoAnimateIcon()">
-              <!-- <ion-icon name="bookmark"></ion-icon> -->
-              Animate Files
-            </ion-segment-button>
-    </ion-segment> 
+
     <div class='ruler'></div>
   </ion-header>
 

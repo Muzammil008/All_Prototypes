@@ -1,0 +1,102 @@
+
+ <ion-header>
+
+    <ion-navbar>
+      <ion-title>Cards</ion-title>
+      
+    </ion-navbar>
+  
+  </ion-header>
+      <ion-content>
+<ion-row>
+  <ion-col>
+      <ion-slides pager>
+
+          <ion-slide [@itemState]="chats.length" class="child">
+              <img class="child" src="../assets/imgs/Debit-prepaid.png">
+              <ion-row class="child">
+                  <ion-col col-9>
+<div class="recent">
+<h1>Recent Transaction</h1>
+</div>
+                  </ion-col>
+                  <ion-col col-3>
+                      <div class="recent icon">
+                          <ion-icon name="md-calendar"></ion-icon>
+                          </div>
+                  </ion-col>
+                </ion-row>
+              <ion-list>
+                  <ion-item class="child item-remove-animate item-avatar item-icon-right chat-item" *ngFor="let chat of chats" type="item-text-wrap">
+                   
+                        <h2>{{chat.name}}</h2>
+                        <p>{{chat.lastText}}</p>
+                        <i class="icon ion-chevron-right icon-accessory"></i>
+                   
+            
+                  
+                  </ion-item>
+                </ion-list>
+            </ion-slide>
+        
+          <ion-slide [@itemState1]="chats.length" class="child1">
+              <img class="child1" src="../assets/imgs/Debit-prepaid.png">
+              <ion-row class="child1">
+                  <ion-col col-9>
+<div class="recent">
+<h1>Recent Transaction</h1>
+</div>
+                  </ion-col>
+                  <ion-col col-3>
+                      <div class="recent icon">
+                          <ion-icon name="md-calendar"></ion-icon>
+                          </div>
+                  </ion-col>
+                </ion-row>
+              <ion-list>
+                  <ion-item class="child1 item-remove-animate item-avatar item-icon-right chat-item" *ngFor="let chat of chats" type="item-text-wrap">
+                   
+                        <h2>{{chat.name}}</h2>
+                        <p>{{chat.lastText}}</p>
+                        <i class="icon ion-chevron-right icon-accessory"></i>
+                   
+            
+                  
+                  </ion-item>
+                </ion-list>
+            </ion-slide>
+            <ion-slide [@itemState]="chats.length" class="child">
+                <img class="child" src="../assets/imgs/Debit-prepaid.png">
+                <ion-row class="child">
+                  <ion-col col-9>
+<div class="recent">
+<h1>Recent Transaction</h1>
+</div>
+                  </ion-col>
+                  <ion-col col-3>
+                      <div class="recent icon">
+                          <ion-icon name="md-calendar"></ion-icon>
+                          </div>
+                  </ion-col>
+                </ion-row>
+                <ion-list>
+                    <ion-item class="child item-remove-animate item-avatar item-icon-right chat-item" *ngFor="let chat of chats" type="item-text-wrap">
+                     
+                          <h2>{{chat.name}}</h2>
+                          <p>{{chat.lastText}}</p>
+                          <i class="icon ion-chevron-right icon-accessory"></i>
+                     
+              
+                    
+                    </ion-item>
+                  </ion-list>
+              </ion-slide>
+        
+        </ion-slides>
+  </ion-col>
+</ion-row>
+
+       
+       
+      </ion-content>
+    
