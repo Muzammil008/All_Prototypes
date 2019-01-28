@@ -829,7 +829,7 @@ var that=this;
           infiniteScroll.enable(true);
         }
 
-      }, 500);
+      }, 300);
     })
 
   }
