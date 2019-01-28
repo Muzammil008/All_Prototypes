@@ -1,175 +1,174 @@
+<ion-header class="header-top hammad " #test>
 
-<ion-header class="header-top hammad " #test >
-
-  <ion-row class="backgroundprofile">
-      <ion-col col-9>
-  <div class="header-text">
-  <h2>Dimest</h2>
-  <p>1234 XXXX XXXX XXX</p>
-  </div>
-      </ion-col>
-      <ion-col col-2 class="icon-content">
-          <ion-icon name="ios-contact"></ion-icon>
-      </ion-col>
-    </ion-row>
+  <ion-row class="backgroundprofile" align-items-center>
+    <ion-col class="col col-9" col-9 size="9">
+      <div class="header-text">
+        <h2>Dimest</h2>
+        <p>1234 XXXX XXXX XXX</p>
+      </div>
+    </ion-col>
+    <ion-col col-2 class="icon-content" align-self-end>
+      <ion-icon name="ios-contact"></ion-icon>
+    </ion-col>
+  </ion-row>
 
 </ion-header><!-- /header -->
 
 <div class="sroll kashif">
-  <ion-row class="choose1" >
-      <ion-col>
-<ion-row>
-<ion-col>
-<div class="select">
-<div class="icon-select" (click)="card()">
-    <ion-icon name="ios-card"></ion-icon>
-</div>
- 
-  <p>card</p>
-</div>
-</ion-col>
-<ion-col>
-    <div class="select">
-        <div class="icon-select">
-        <ion-icon name="md-calendar"></ion-icon>
-        </div>
-        <p>Sinstallment</p>
-    </div>
-  </ion-col>
-  <ion-col>
-      <div class="select">
-          <div class="icon-select">
-          <ion-icon name="ios-cash"></ion-icon>
-          </div>
-          <p>Loan</p>
-      </div>
-    </ion-col>
-</ion-row>
-<ion-row>
-  <ion-col>
-<div class="select">
-  <div class="icon-select">
-      <ion-icon name="ios-card"></ion-icon>
-  </div>
-   
-    <p>card</p>
-</div>
-  </ion-col>
-  <ion-col>
-      <div class="select">
-          <div class="icon-select">
-          <ion-icon name="md-calendar"></ion-icon>
-          </div>
-          <p>Sinstallment</p>
-      </div>
-    </ion-col>
+  <ion-row class="choose1">
     <ion-col>
-        <div class="select">
+      <ion-row>
+        <ion-col>
+          <div class="select">
+            <div class="icon-select" (click)="card()">
+              <ion-icon name="ios-card"></ion-icon>
+            </div>
+
+            <p>card</p>
+          </div>
+        </ion-col>
+        <ion-col>
+          <div class="select">
             <div class="icon-select">
-            <ion-icon name="ios-cash"></ion-icon>
+              <ion-icon name="md-calendar"></ion-icon>
+            </div>
+            <p>Sinstallment</p>
+          </div>
+        </ion-col>
+        <ion-col>
+          <div class="select">
+            <div class="icon-select">
+              <ion-icon name="ios-cash"></ion-icon>
             </div>
             <p>Loan</p>
-        </div>
-      </ion-col>
-</ion-row>
-
-      </ion-col>
-    </ion-row>
-    
-    <ion-row class="down">
-      <ion-col>
-        <div class="balance">
-<h1>Balance</h1>
-        </div>
-        <ion-row>
-          <ion-col>
-            <div class="streem">
-<div class="color1"></div>
-<p><ng2-odometer [number]="number" [theme]="'default'"></ng2-odometer></p>
-<h1>STEEM</h1>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <div class="select">
+            <div class="icon-select">
+              <ion-icon name="ios-card"></ion-icon>
             </div>
 
-          </ion-col>
-          <ion-col>
-              <div class="streem">
-                  <div class="color2"></div>
-                  <p><ng2-odometer [number]="number" [theme]="'default'"></ng2-odometer></p>
-                  <h1>SBD</h1>
-                              </div>
-            </ion-col>
-        </ion-row>
-      </ion-col>
-    </ion-row>
-    <ion-row class="round">
-        <ion-col>
-          <ion-row>
-            <ion-col col-7>
-              <div class="streem1">
-                <p>47.80%</p>
-                <h1>Resource Credits</h1>
-              </div>
-  
-            </ion-col>
-            <ion-col col-5>
-              
-                  <canvas baseChart
-                [data]="doughnutChartData"
-                
-                [chartType]="doughnutChartType"
-                (chartHover)="chartHovered($event)"
-                (chartClick)="chartClicked($event)"></canvas>
- 
-                               
-              </ion-col>
-          </ion-row>
-        </ion-col>
-      </ion-row>
-      <ion-row class="down">
-        <ion-col>
-          <div class="balance">
-  <h1>Balance</h1>
+            <p>card</p>
           </div>
-          <ion-row>
-            <ion-col>
-              <div class="streem">
-  <div class="color1"></div>
-  <p><ng2-odometer [number]="number" [theme]="'default'"></ng2-odometer></p>
-  <h1>STEEM</h1>
-              </div>
-  
-            </ion-col>
-            <ion-col>
-                <div class="streem">
-                    <div class="color2"></div>
-                    <p><ng2-odometer [number]="number" [theme]="'default'"></ng2-odometer></p>
-                    <h1>SBD</h1>
-                                </div>
-              </ion-col>
-          </ion-row>
         </ion-col>
-      </ion-row>
-      <ion-row class="round">
         <ion-col>
-          <ion-row>
-            <ion-col col-7>
-              <div class="streem1">
-                <p>47.80%</p>
-                <h1>Resource Credits</h1>
-              </div>
-  
-            </ion-col>
-            <ion-col col-5>
-              
-                  <canvas baseChart
-                [data]="doughnutChartData"
-                
-                [chartType]="doughnutChartType"
-                (chartHover)="chartHovered($event)"
-                (chartClick)="chartClicked($event)"></canvas>
- 
-                               
-              </ion-col>
-          </ion-row>
+          <div class="select">
+            <div class="icon-select">
+              <ion-icon name="md-calendar"></ion-icon>
+            </div>
+            <p>Sinstallment</p>
+          </div>
+        </ion-col>
+        <ion-col>
+          <div class="select">
+            <div class="icon-select">
+              <ion-icon name="ios-cash"></ion-icon>
+            </div>
+            <p>Loan</p>
+          </div>
         </ion-col>
       </ion-row>
-  </div>
+
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="down">
+    <ion-col>
+      <div class="balance">
+        <h1>Balance</h1>
+      </div>
+      <ion-row>
+        <ion-col>
+          <div class="streem">
+            <div class="color1"></div>
+            <p>
+              <ng2-odometer [number]="number" [theme]="'default'"></ng2-odometer>
+            </p>
+            <h1>STEEM</h1>
+          </div>
+
+        </ion-col>
+        <ion-col>
+          <div class="streem">
+            <div class="color2"></div>
+            <p>
+              <ng2-odometer [number]="number" [theme]="'default'"></ng2-odometer>
+            </p>
+            <h1>SBD</h1>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+  <ion-row class="round">
+    <ion-col>
+      <ion-row>
+        <ion-col col-7>
+          <div class="streem1">
+            <p>47.80%</p>
+            <h1>Resource Credits</h1>
+          </div>
+
+        </ion-col>
+        <ion-col col-5>
+
+          <canvas baseChart [data]="doughnutChartData" [chartType]="doughnutChartType" (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)"></canvas>
+
+
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+  <ion-row class="down">
+    <ion-col>
+      <div class="balance">
+        <h1>Balance</h1>
+      </div>
+      <ion-row>
+        <ion-col>
+          <div class="streem">
+            <div class="color1"></div>
+            <p>
+              <ng2-odometer [number]="number" [theme]="'default'"></ng2-odometer>
+            </p>
+            <h1>STEEM</h1>
+          </div>
+
+        </ion-col>
+        <ion-col>
+          <div class="streem">
+            <div class="color2"></div>
+            <p>
+              <ng2-odometer [number]="number" [theme]="'default'"></ng2-odometer>
+            </p>
+            <h1>SBD</h1>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+  <ion-row class="round">
+    <ion-col>
+      <ion-row>
+        <ion-col col-7>
+          <div class="streem1">
+            <p>47.80%</p>
+            <h1>Resource Credits</h1>
+          </div>
+
+        </ion-col>
+        <ion-col col-5>
+
+          <canvas baseChart [data]="doughnutChartData" [chartType]="doughnutChartType" (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)"></canvas>
+
+
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+</div>

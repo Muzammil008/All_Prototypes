@@ -94,6 +94,17 @@ var App = function(){
 
     }
 
+    var _pageStatements = function(){
+        $('body').on('click','.popup',function(e){
+            e.preventDefault();
+            $('.box-content').addClass('opened');
+        });
+        $('body').on('click','.close',function(e){
+            e.preventDefault();
+            $('.box-content').removeClass('opened');
+        });
+    }
+
     return {
         init: function(){
             _pageAccounts();
@@ -101,12 +112,13 @@ var App = function(){
             _pageExpenseChart();
             _pageOTP();
             _pageInputTextFocus();
+            _pageStatements();
         } // init
     }// return
 }(); // App
 
 $(document).ready(function(){
-
+    
 });
 
 window.onload = function(){

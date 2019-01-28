@@ -57,9 +57,9 @@ page-headerslide {
 
   ion-row.choose1.row {
     background: #fff;
-    width: 90%;
     margin: 0 auto;
     margin-top: 2%;
+    margin-bottom: 15px;
     -webkit-box-shadow: 0px 10px 8px #888888;
     box-shadow: 0px 10px 8px #888888;
     border-radius: 12px;
@@ -141,7 +141,7 @@ padding: 20px 0px;
     box-shadow: 0px 1px 4px 0px #888888;
     border-radius: 12px;
     padding: 10px;
-    margin: 10px;
+    margin: 10px 0;
   }
 
   canvas.chartjs-render-monitor {
@@ -153,9 +153,7 @@ padding: 20px 0px;
   ion-grid.grid {
     padding: 0px;
 }
-ion-col.col {
-  padding: 0px;
-}
+
 }
 
 .header-top {
@@ -171,7 +169,11 @@ background-color: transparent;
 -moz-transition: height 0.3s;
 -ms-transition: height 0.3s;
 -o-transition: height 0.3s;
-transition: height 0.3s; }
+transition: height 0.3s; 
+  ion-row{
+    padding: 15px;
+  }
+}
 
 .header-top .header-text h2{
     font-size: 30px;
@@ -189,7 +191,6 @@ transition: height 0.3s; }
     .header-top .icon-content ion-icon.icon {
         font-size: 90px;
         color: #fff;
-        padding-top: 20px;
         -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -ms-transition: all 0.3s;
@@ -199,18 +200,19 @@ transition: height 0.3s; }
     header nav a:hover {
       color: white; }
 .header-top.smaller {
-  height: 70px; }
+  height: 70px; 
+  ion-row {
+    padding: 10px 50px 10px 16px;
+  }
+}
   .header-text {
     padding-left: 20px;
-}
-ion-row.down.row {
-    margin: 10px;
 }
    .header-top.smaller .header-text h2 {
     font-size: 25px;
     color: #fff;
     margin: 0px;
-    padding-top: 22px;
+    padding-top: 0px;
  -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -ms-transition: all 0.3s;
@@ -224,20 +226,26 @@ ion-row.down.row {
     }
   
     .smaller ion-row.choose1.row {
-        position: relative;
-        z-index: unset;
-        top: 0;
+      position: static;
+      z-index: unset;
+      top: 45px;
+      // margin-top: 155px;
     }
     .sroll.kashif {
         padding-top: 110px;
-overflow-y: scroll;
-height: 820px;
-overflow-x: hidden;
+        overflow-y: scroll;
+        height: 100vh;
+        overflow-x: hidden;
+        padding-left: 20px;
+        padding-right: 20px;
+        &.smaller{
+          padding-top: 156px;          
+        }
     }
     .header-top.smaller .icon-content ion-icon.icon {
       font-size: 55px;
-      padding-top: 10px;
       margin-left: 20px;
+      float: right;
     }
     .smaller .header-text p {
         display: none;

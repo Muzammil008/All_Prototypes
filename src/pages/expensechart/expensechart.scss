@@ -32,6 +32,10 @@ page-expensechart {
     .scrolling-area{
         height: calc(100vh - 72px);
         overflow-y: auto;
+        .card{
+            background-color: transparent;
+            border:none;
+        }
     }
 
     .main-container{

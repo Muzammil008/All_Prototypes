@@ -41,6 +41,7 @@ page-statement-details {
         text-align: left;
         font-size: 10px;
         z-index: 1;
+        overflow: hidden;
         h2{
             margin-top: 0px;
             font-size: 14px;
@@ -103,7 +104,7 @@ page-statement-details {
         perspective: 400px;
     }
     .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets{
-        bottom: -30px;
+        bottom: -60px;
     }
     .swiper-slide{
         transition: all 0.5s ease-in-out;

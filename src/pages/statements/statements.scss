@@ -46,7 +46,7 @@ page-statements {
     position: absolute;
     top: 0;
     left: 0;
-    background-size: cover;
+    // background-size: cover;
     background-repeat: repeat-x;
 
 	animation: animatedBackground 10s linear infinite;
@@ -92,6 +92,31 @@ page-statements {
     position: absolute;
     margin: 0px 30px;
     bottom: 0;
+    z-index: 999;
+    overflow: hidden;
+}
+.box-content{
+    *{
+        opacity: 0;
+        display: none;
+        transition-property: opacity;
+        transition-duration: 1s;
+        transition-delay: 1s;
+
+    }
+    &.opened{
+        *{
+            opacity: 1;
+            display: block;
+            transition-property: opacity;
+            transition-duration: 1s;
+            transition-delay: 0.3s;
+        }
+    }
+}
+.close{
+    position: absolute;
+    z-index: 999;
 }
 h2.child {
     font-size: 40px;
