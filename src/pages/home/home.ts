@@ -28,8 +28,7 @@ export class HomePage {
   items = [];
   currentItem = 0;
   total = 10;
-  @ViewChild(Content)
-  content: Content;
+  @ViewChild(Content) content: Content;
   @ViewChild(Scroll) scroll: Scroll;
   itemImages: any;
   @ViewChild('myId') myId: ElementRef;
@@ -558,19 +557,19 @@ export class HomePage {
   public linesPerScreen = 44;
   public pointerWidth = (this.screenWidth / this.linesPerScreen) - 1.2;
   public activePostNumber = $('.gedf-card.active').attr('data-post-number');
-  maxpoint: number=this.Data[0].Points;
+  maxpoint: number = this.Data[0].Points;
 
 
   ionViewDidLoad() {
     //alert("Did Load")
     this.maxAmount = this.Data[0].totalAmount;
 
-    // Sum of All Items Amount
+    // Sum of All Items Amount - Sum Amount
     for (var i = 0; i < this.Data.length; i++) {
       this.total_SumAmount = this.total_SumAmount + this.Data[i].totalAmount;
     }
 
-    // Get Max Value for totalAmount
+    // Get Max Value for totalAmount - Max Amount
     for (var i = 1; i < this.Data.length; i++) {
       if (this.maxAmount < this.Data[i].totalAmount) {
         this.maxAmount = this.Data[i].totalAmount;
@@ -579,19 +578,14 @@ export class HomePage {
     //console.log('maxAmount: ' + this.maxAmount);
 
 
-        // Get Max Value for totalPoint
-        for (var i = 1; i < this.Data.length; i++) {
-          if (this.maxpoint < this.Data[i].Points) {
-            this.maxpoint = this.Data[i].Points;
-          }
-        }
-       // console.log('maxpoint: ' + this.maxpoint);
-
-
-
+    // Get Max Value for totalPoint - Max Point Value
+    for (var i = 1; i < this.Data.length; i++) {
+      if (this.maxpoint < this.Data[i].Points) {
+        this.maxpoint = this.Data[i].Points;
+      }
+    }
+    // console.log('maxpoint: ' + this.maxpoint);
     // $(window).on('load resize', function() {
-
-
     // });  
 
     setTimeout(() => {
@@ -672,7 +666,10 @@ export class HomePage {
 
   createRuler() {
 
+    // Create Ruler Pointer
     $('.ruler').append('<div class="pointer" style="width:' + this.pointerWidth + 'px"></div>');
+    
+    // Add Ruler Lines in Ruler
     for (let r = 0; r < this.NumbersOfPosts; r++) {
       let getHeight = this.Data[r].Points / this.maxpoint * 100;
       var postnumber = r + 1;
@@ -733,17 +730,17 @@ export class HomePage {
     let post = $('.gedf-card');
     let totalPost = this.Data.length;
     let setPercentage = 100 / totalPost + '%';
+    let getScrollPosition = this.content.scrollTop;
 
     // Get Active Class for Currnt Post
     $('.gedf-card').each(function () {
-      console.log("Active")
       let positionTop = $(this).position().top - 50;
       let positionBottom = positionTop + $(this).height();
 
-     
-      if ($('.scroll-content').scrollTop() >= positionTop && $('.scroll-content').scrollTop() <= positionBottom) {
+      if (getScrollPosition >= positionTop && getScrollPosition <= positionBottom) {
         $(this).addClass('active').siblings().removeClass('active');
       }
+
     });
 
     // For Ruler Caculation
@@ -755,7 +752,7 @@ export class HomePage {
     let getPercentage = $('.ruler-line[data-post-number="' + getActiveNumber + '"]').position().left + 1;
 var that=this;
     // On scrolling set active class
-    if ($('.scroll-content').scrollTop() > 10) {
+    if ( getScrollPosition > 10) {
       $('.ruler').addClass('fixed');
       $('.ruler .pointer').css({ 'left': getPercentage });
       $('.ruler-line').each(function (i) {
@@ -763,8 +760,9 @@ var that=this;
 
         if (getActiveNumber == parseInt($(this).attr('data-post-number'))) {
           that.totalAmount = that.Data[getActiveNumber - 1].totalAmount;
-          console.log(that.totalAmount)
-          $(this).addClass('active').siblings().removeClass('active'); console.log($(this).addClass('active').siblings().removeClass('active'))
+          //console.log(that.totalAmount)
+          $(this).addClass('active').siblings().removeClass('active'); 
+         // console.log($(this).addClass('active').siblings().removeClass('active'));
         }
       });
 
@@ -779,32 +777,13 @@ var that=this;
   }
 
   rulerCalc(position) {
-   // alert("rulercal")
-    // this.linesPerScreen //= 44;
-    // this.pointerWidth //= ( this.screenWidth / this.linesPerScreen )  - 1.2;
-    // this.activePostNumber // = $('.gedf-card.active').attr('data-post-number');
+
     let getPos = parseFloat($('.ruler').css('marginLeft'));
     let halfScreen = $(window).width() / 4;
     let pointers = Math.floor(this.pointerWidth * 8);
     let getActiveNumber = parseInt($('.gedf-card.active').attr('data-post-number'));
     let applyPos;
     let minLines = this.linesPerScreen - 8;
-
-    //console.log('Lines/Screen : ' + this.linesPerScreen);
-
-    // Motion of Ruler
-    // if(position === 'up'){
-    //   if( this.NumbersOfPosts == getActiveNumber && getActiveNumber > this.linesPerScreen || getActiveNumber % 8 == 0 && getActiveNumber > minLines ){
-    //     applyPos = getPos + pointers;
-    //     $('.ruler').css({'marginLeft': applyPos });
-    //   }
-    // }
-    // else if(position === 'down'){
-    //   if( getActiveNumber % 8 == 0 && getActiveNumber > minLines && getActiveNumber !== this.NumbersOfPosts){
-    //     applyPos = getPos - pointers
-    //     $('.ruler').css({'marginLeft': applyPos });
-    //   }
-    // }
 
     if (position === 'up') {
       //if($('.ruler-line.brige').hasClass('active') &&  getActiveNumber > minLines && this.NumbersOfPosts !== getActiveNumber )
@@ -820,17 +799,7 @@ var that=this;
       }
     }
 
-
-
-
-    //console.log(typeof getActiveNumber);
-    //console.log(typeof position);
     let mod = getActiveNumber % 10 == 0;
-    // console.log('Modulas: ' + mod);
-    // console.log('pointers: ' + pointers);
-    // console.log('getActiveNumber: ' + getActiveNumber);
-    // console.log('Get Pos: ' + getPos);
-    // console.log('Apply Position: ' + applyPos);
 
   }
 
@@ -843,32 +812,16 @@ var that=this;
 
     return new Promise((resolve) => {
       setTimeout(() => {
-        //console.log(infiniteScroll)
-
-        // var index = Math.floor(Math.random() * 12) + 0
-       /// console.log(this.lastIndex);
         this.items.push(this.Data[this.lastIndex]);
        // console.log(this.items)
         this.lastIndex++;
-
-        // this.totalAmount = this.totalAmount - this.Data[index].Points;
-        // console.log(this.totalAmount)
-        // if( this.totalAmount < 0){
-        //   this.totalAmount=0;
-        // }
 
         if (this.currentItem == 0) {
           this.totalAmount = this.Data[this.currentItem].totalAmount;
         } else {
           this.totalAmount = this.Data[this.currentItem - 1].totalAmount;
         }
-
-
-
-
-
-
-        // this.totalAmount = this.totalAmount - this.Data[index].Points;
+  
         if (this.items.length >= this.Data.length) {
           infiniteScroll.enable(false);
           infiniteScroll.complete();

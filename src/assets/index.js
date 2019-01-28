@@ -51,7 +51,7 @@ $(window).scroll(function(){
 function createRuler() {
 
     // Add Active Class
-    document.querySelectorAll('.post-widget')[0].classList.add('active');
+    //document.querySelectorAll('.post-widget')[0].classList.add('active');
     
     post.each(function(i){
         $(this).attr('data-post-number',i+1);
