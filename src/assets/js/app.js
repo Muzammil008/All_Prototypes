@@ -118,12 +118,14 @@ var App = function(){
 }(); // App
 
 $(document).ready(function(){
-    
+   // introJs().start();
 });
 
 window.onload = function(){
 
     App.init();
+
+    
 
 };
 
