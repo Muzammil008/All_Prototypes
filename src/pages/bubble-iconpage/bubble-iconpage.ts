@@ -7,7 +7,8 @@ import { ChatbotPage } from '../chatbot/chatbot';
 import { QrReaderPage } from '../qr-reader/qr-reader';
 
 import { VisapagePage } from '../visapage/visapage';
-import { ExpensechartPage } from '../expensechart/expensechart';
+
+import { StatementsPage } from '../statements/statements';
 
 
 /**
@@ -26,7 +27,7 @@ export class BubbleIconpagePage {
   tab1Root = CardIoPage;
   tab2Root = QrReaderPage;
   tab3Root = ChatbotPage;
-  tab4Root = ExpensechartPage;
+  tab4Root = StatementsPage;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
 

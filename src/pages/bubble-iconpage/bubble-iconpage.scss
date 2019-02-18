@@ -17,6 +17,9 @@ page-bubble-iconpage {
         // transition-duration: 1s, 1s;
         // transition-delay: 0s, 0s;
         transition: max-width 0.2s ease-in-out;
+        .button-effect {
+            visibility: hidden;
+        }
         *{
             -webkit-box-flex: 1;
             -webkit-flex: auto;
@@ -41,6 +44,9 @@ page-bubble-iconpage {
             .tab-button-text{
                 transition: none;
                 width: auto;
+            }
+            .button-effect {
+                visibility: visible;
             }
         }
         .icon{
