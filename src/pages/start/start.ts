@@ -6,6 +6,8 @@ import { LoginPage } from '../login/login';
 import { VisapagePage } from '../visapage/visapage';
 import { CardsliderPage } from '../cardslider/cardslider';
 import { CardIoPage } from '../card-io/card-io';
+import { BubbleIconpagePage } from '../bubble-iconpage/bubble-iconpage';
+
 
 //import introJs from '../../assets/js/intro.js';
 
@@ -117,6 +119,10 @@ export class StartPage {
 
   gotoVisa() {
     this.navCtrl.push(VisapagePage)
+  }
+
+  gotoBubbleIconTab() {
+    this.navCtrl.push(BubbleIconpagePage)
   }
 
 

@@ -22,10 +22,14 @@ import { ReversePipe } from '../pipes/reverse/reverse';
 import { ChartModule} from 'angular2-highcharts';
 import { Contacts } from '@ionic-native/contacts';
 import { ContactListPage } from '../pages/contact-list/contact-list';
+import { BubbleIconpagePage } from '../pages/bubble-iconpage/bubble-iconpage';
 import {AnimatedHeaderComponentClass} from "../components/animated-header/animated-header.component";
 import { AnimateIconsPage } from '../pages/animate-icons/animate-icons';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Ng2OdometerModule } from 'ng2-odometer';
+import { ChatbotPage } from '../pages/chatbot/chatbot';
+
+
 @NgModule({
   declarations: [
     MyApp,
@@ -38,7 +42,9 @@ import { Ng2OdometerModule } from 'ng2-odometer';
     ReversePipe,
     ContactListPage,
     AnimateIconsPage,
-    AnimatedHeaderComponentClass
+    AnimatedHeaderComponentClass,
+    BubbleIconpagePage,
+    ChatbotPage
   ],
   imports: [
     BrowserModule,HttpModule,FormsModule,ScrollEventModule,NgQRCodeReaderModule,
@@ -56,7 +62,9 @@ import { Ng2OdometerModule } from 'ng2-odometer';
     QrReaderPage,
     CardIoPage,
     ContactListPage,
-    AnimateIconsPage
+    AnimateIconsPage,
+    BubbleIconpagePage,
+    ChatbotPage
   ],
   providers: [
     StatusBar,
