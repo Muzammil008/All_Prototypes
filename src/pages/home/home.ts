@@ -614,7 +614,7 @@ export class HomePage {
 
 
     if (this.plt.height() <= 800) {
-      this.lastIndex = 1;
+      this.lastIndex =2;
     } else if (this.plt.height() <= 1200) {
       this.lastIndex = 2;
     }
@@ -644,6 +644,7 @@ export class HomePage {
 
 
     // }
+  
     for (this.startIndex; this.startIndex < this.lastIndex; this.startIndex++) {
 
       this.items.push(this.Data[this.startIndex]);
@@ -829,7 +830,7 @@ var that=this;
           infiniteScroll.enable(true);
         }
 
-      }, 300);
+      }, 200);
     })
 
   }
