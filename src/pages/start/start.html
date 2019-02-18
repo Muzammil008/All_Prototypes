@@ -7,24 +7,32 @@
 </ion-header>
 
 <ion-content padding>
+    <div data-step="3" data-intro="This is List Tabs.">
   <ion-segment color="primary">
-    <ion-segment-button value="animation" (ionSelect)="animationList()" >
-      <ion-label>Animations</ion-label>
-    </ion-segment-button>
-    <ion-segment-button value="hybrid"  (ionSelect)="functionList()">
+    
+      <ion-segment-button value="animation" (ionSelect)="animationList()">
+        <ion-label>Animations</ion-label>
+      </ion-segment-button>
+    
+    <ion-segment-button value="hybrid" (ionSelect)="functionList()">
       <ion-label>Widgets</ion-label>
     </ion-segment-button>
 
-  </ion-segment>
-  <ion-list *ngIf="animationListShow == true">
-    
+  </ion-segment></div>
+  <!-- List Collection - Start -->
+  <div step1 id="step1" data-step="1" data-intro="This is Lists of Main Prototypes.">
 
-      <ion-item (click)="gotoAccounts()">
-        <ion-avatar item-start>
-          <img src="../../assets/imgs/accounts_preview.jpeg">
-        </ion-avatar>
-        <h2>accounts.mp4</h2>
-      </ion-item>
+
+    <ion-list *ngIf="animationListShow == true">
+
+      <div data-step="2" data-intro="This is Lists Item.">
+        <ion-item (click)="gotoAccounts()">
+          <ion-avatar item-start>
+            <img src="../../assets/imgs/accounts_preview.jpeg">
+          </ion-avatar>
+          <h2>accounts.mp4</h2>
+        </ion-item>
+      </div>      
 
       <ion-item (click)="gotoBlockCard()">
         <ion-avatar item-start>
@@ -41,44 +49,44 @@
       </ion-item>
 
       <ion-item (click)="gotoOTP()">
-        <ion-avatar item-start>  
+        <ion-avatar item-start>
           <img src="../../assets/imgs/OTP_preview.jpeg" alt="">
         </ion-avatar>
         <h2>OTP.mp4</h2>
       </ion-item>
 
       <ion-item (click)="textInputFocus()">
-        <ion-avatar item-start>  
+        <ion-avatar item-start>
           <img src="../../assets/imgs/text-input-focus.jpg" alt="">
         </ion-avatar>
         <h2>text-input-focus.mp4</h2>
       </ion-item>
 
       <ion-item (click)="gotoStatementDetails()">
-        <ion-avatar item-start>  
+        <ion-avatar item-start>
           <img src="../../assets/imgs/text-input-focus.jpg" alt="">
         </ion-avatar>
         <h2>Statement-Details.mp4</h2>
       </ion-item>
       <ion-item (click)="card()">
         <ion-avatar item-start>
-            <img src="../../assets/imgs/statment.jpg" alt="">
+          <img src="../../assets/imgs/statment.jpg" alt="">
         </ion-avatar>
         <h2>Statement.mp4</h2>
-    </ion-item>
+      </ion-item>
 
-    <ion-item (click)="card1()">
+      <ion-item (click)="card1()">
         <ion-avatar item-start>
-            <img src="../../assets/imgs/scrolling.png" alt="">
+          <img src="../../assets/imgs/scrolling.png" alt="">
         </ion-avatar>
         <h2>Scrolling.mp4</h2>
-    </ion-item>
-    <ion-item (click)="card2()">
+      </ion-item>
+      <ion-item (click)="card2()">
         <ion-avatar item-start>
-            <img src="../../assets/imgs/success.jpg" alt="">
+          <img src="../../assets/imgs/success.jpg" alt="">
         </ion-avatar>
         <h2>Success.mp4</h2>
-    </ion-item>
+      </ion-item>
       <!-- <ion-item-sliding>
 
       <ion-item-options side="left">
@@ -102,58 +110,60 @@
     </ion-item-sliding> -->
 
 
-  </ion-list>
+    </ion-list>
 
-  <ion-list *ngIf="animationListShow == false">
-  
+    <ion-list *ngIf="animationListShow == false">
 
-    <ion-item (click)="gotoQrReader()">
+
+      <ion-item (click)="gotoQrReader()">
         <ion-avatar item-start>
-            <img src="../../assets/imgs/qrreader.png">
+          <img src="../../assets/imgs/qrreader.png">
         </ion-avatar>
         <h2>QR Reader</h2>
-    </ion-item>
+      </ion-item>
 
-    <ion-item (click)="gotoSlider()">
+      <ion-item (click)="gotoSlider()">
         <ion-avatar item-start>
-            <img src="../../assets/imgs/SmartPay-Card-720x460px.png">
+          <img src="../../assets/imgs/SmartPay-Card-720x460px.png">
         </ion-avatar>
         <h2>Card Slider</h2>
-    </ion-item>
+      </ion-item>
 
-    <ion-item (click)="gotoVisa()">
-      <ion-avatar item-start>
+      <ion-item (click)="gotoVisa()">
+        <ion-avatar item-start>
           <img src="../../assets/imgs/Debit-prepaid.png">
-      </ion-avatar>
-      <h2>Visa Card </h2>
-  </ion-item>
-  <ion-item (click)="gotoRulerPage()">
-    <ion-avatar item-start>
-        <img src="../../assets/imgs/scrolling.png">
-    </ion-avatar>
-    <h2>Ruler</h2>
-</ion-item>
-  <ion-item (click)="gotoLogin()">
-    <ion-avatar item-start>
-        <img src="../../assets/imgs/fab.jpg">
-    </ion-avatar>
-    <h2>Fab Login </h2>
-</ion-item>
+        </ion-avatar>
+        <h2>Visa Card </h2>
+      </ion-item>
+      <ion-item (click)="gotoRulerPage()">
+        <ion-avatar item-start>
+          <img src="../../assets/imgs/scrolling.png">
+        </ion-avatar>
+        <h2>Ruler</h2>
+      </ion-item>
+      <ion-item (click)="gotoLogin()">
+        <ion-avatar item-start>
+          <img src="../../assets/imgs/fab.jpg">
+        </ion-avatar>
+        <h2>Fab Login </h2>
+      </ion-item>
 
-<ion-item (click)="gotochatBot()">
-  <ion-avatar item-start>
-      <img src="../../assets/imgs/chat.jpg">
-  </ion-avatar>
-  <h2>ChatBot </h2>
-</ion-item>
+      <ion-item (click)="gotochatBot()">
+        <ion-avatar item-start>
+          <img src="../../assets/imgs/chat.jpg">
+        </ion-avatar>
+        <h2>ChatBot </h2>
+      </ion-item>
 
-<ion-item (click)="gotocardId()">
-  <ion-avatar item-start>
-      <img src="../../assets/imgs/SmartPay-Card-720x460px.png">
-  </ion-avatar>
-  <h2>CardIO </h2>
-</ion-item>
-  
-</ion-list>
+      <ion-item (click)="gotocardId()">
+        <ion-avatar item-start>
+          <img src="../../assets/imgs/SmartPay-Card-720x460px.png">
+        </ion-avatar>
+        <h2>CardIO </h2>
+      </ion-item>
+
+    </ion-list>
+
+  </div><!-- List Collection - End -->
 
 </ion-content>

@@ -5,8 +5,11 @@ import { QrReaderPage } from '../qr-reader/qr-reader';
 import { LoginPage } from '../login/login';
 import { VisapagePage } from '../visapage/visapage';
 import { CardsliderPage } from '../cardslider/cardslider';
-
 import { CardIoPage } from '../card-io/card-io';
+
+//import introJs from '../../assets/js/intro.js';
+
+//declare var intro;
 
 /**
  * Generated class for the StartPage page.
@@ -21,64 +24,84 @@ import { CardIoPage } from '../card-io/card-io';
   templateUrl: 'start.html',
 })
 export class StartPage {
-  public animationListShow:boolean=true;
+  public animationListShow: boolean = true;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    //intro.start();
   }
-  public animationList(){
-    this.animationListShow=true;
-    }
   
-    public functionList(){
-      this.animationListShow=false;
-      }
+  // intro() {
+  //   let intro = introJs.introJs();
+  //   // Initialize steps
+  //   intro.setOptions({
+  //     steps: [
+  //       {
+  //         intro: "Hello world!"
+  //       },
+  //       {
+  //         element: document.querySelector('#step1'),
+  //         intro: "This is a tooltip."
+  //       }
+  //     ]
+  //   });
+  //   intro.start();
+  // }
+
+  public animationList() {
+    this.animationListShow = true;
+  }
+
+  public functionList() {
+    this.animationListShow = false;
+  }
   ionViewDidLoad() {
     console.log('ionViewDidLoad StartPage');
+
   }
-  card(){
+  card() {
     this.navCtrl.push("StatementsPage");
   }
-  card1(){
+  card1() {
     this.navCtrl.push("HeaderslidePage");
   }
-  card2(){
+  card2() {
     this.navCtrl.push("SuccessPage");
   }
-  public gotoExpenseChart(){
+  public gotoExpenseChart() {
     this.navCtrl.push("ExpensechartPage")
   }
 
-  public gotoAccounts(){
+  public gotoAccounts() {
     this.navCtrl.push("AccountsPage")
   }
-  
-  public gotoOTP(){
+
+  public gotoOTP() {
     this.navCtrl.push("OtpPage")
   }
 
-  public gotoBlockCard(){
+  public gotoBlockCard() {
     this.navCtrl.push("BlockcardPage")
   }
 
-  public textInputFocus(){
+  public textInputFocus() {
     this.navCtrl.push("TextinputfocusPage")
   }
 
-  public gotoStatementDetails(){
+  public gotoStatementDetails() {
     this.navCtrl.push("StatementDetailsPage");
- 
+
   }
 
-  public gotoRulerPage(){
+  public gotoRulerPage() {
     this.navCtrl.push(HomePage);
- 
+
   }
-  
+
   public gotoQrReader() {
     this.navCtrl.push(QrReaderPage)
   }
 
 
-  gotochatBot(){
+  gotochatBot() {
     this.navCtrl.push("ChatbotPage")
   }
   public gotoLogin() {
@@ -88,7 +111,7 @@ export class StartPage {
   gotoSlider() {
     this.navCtrl.push(CardsliderPage)
   }
-  gotocardId(){
+  gotocardId() {
     this.navCtrl.push(CardIoPage)
   }
 
@@ -97,7 +120,7 @@ export class StartPage {
   }
 
 
- 
+
 
 
 }
