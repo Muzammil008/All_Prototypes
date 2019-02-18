@@ -1,11 +1,14 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-import { AnimateIconsPage } from '../animate-icons/animate-icons';
-import { BlockcardPage } from '../blockcard/blockcard';
 
 import { CardIoPage } from '../card-io/card-io';
 import { ChatbotPage } from '../chatbot/chatbot';
+import { QrReaderPage } from '../qr-reader/qr-reader';
+
+import { VisapagePage } from '../visapage/visapage';
+import { ExpensechartPage } from '../expensechart/expensechart';
+
 
 /**
  * Generated class for the BubbleIconpagePage page.
@@ -21,8 +24,10 @@ import { ChatbotPage } from '../chatbot/chatbot';
 })
 export class BubbleIconpagePage {
   tab1Root = CardIoPage;
-  tab2Root = AnimateIconsPage;
+  tab2Root = QrReaderPage;
   tab3Root = ChatbotPage;
+  tab4Root = ExpensechartPage;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
 
   }
@@ -30,5 +35,4 @@ export class BubbleIconpagePage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad BubbleIconpagePage');
   }
-
 }

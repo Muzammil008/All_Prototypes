@@ -26,6 +26,12 @@
     <ion-list *ngIf="animationListShow == true">
 
       <div data-step="2" data-intro="This is Lists Item.">
+          <ion-item (click)="gotoBubbleIconTab()">
+              <ion-avatar item-start>
+                <img src="../../assets/imgs/bubble.jpeg" alt="">
+              </ion-avatar>
+              <h2>Bubble Icon Tab Bar.mp4</h2>
+            </ion-item>
         <ion-item (click)="gotoAccounts()">
           <ion-avatar item-start>
             <img src="../../assets/imgs/accounts_preview.jpeg">
@@ -89,12 +95,7 @@
         <h2>Success.mp4</h2>
       </ion-item>
 
-      <ion-item (click)="gotoBubbleIconTab()">
-        <ion-avatar item-start>
-          <img src="../../assets/imgs/success.jpg" alt="">
-        </ion-avatar>
-        <h2>Bubble Icon Tab Bar.mp4</h2>
-      </ion-item>
+
       <!-- <ion-item-sliding>
 
       <ion-item-options side="left">

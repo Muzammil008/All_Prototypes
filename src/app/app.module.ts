@@ -28,7 +28,7 @@ import { AnimateIconsPage } from '../pages/animate-icons/animate-icons';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Ng2OdometerModule } from 'ng2-odometer';
 import { ChatbotPage } from '../pages/chatbot/chatbot';
-
+import { ExpensechartPage } from '../pages/expensechart/expensechart';
 
 @NgModule({
   declarations: [
@@ -44,7 +44,8 @@ import { ChatbotPage } from '../pages/chatbot/chatbot';
     AnimateIconsPage,
     AnimatedHeaderComponentClass,
     BubbleIconpagePage,
-    ChatbotPage
+    ChatbotPage,
+    ExpensechartPage
   ],
   imports: [
     BrowserModule,HttpModule,FormsModule,ScrollEventModule,NgQRCodeReaderModule,
@@ -64,7 +65,8 @@ import { ChatbotPage } from '../pages/chatbot/chatbot';
     ContactListPage,
     AnimateIconsPage,
     BubbleIconpagePage,
-    ChatbotPage
+    ChatbotPage,
+    ExpensechartPage
   ],
   providers: [
     StatusBar,
