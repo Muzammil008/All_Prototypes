@@ -7,6 +7,10 @@ import { VisapagePage } from '../visapage/visapage';
 import { CardsliderPage } from '../cardslider/cardslider';
 import { CardIoPage } from '../card-io/card-io';
 import { BubbleIconpagePage } from '../bubble-iconpage/bubble-iconpage';
+import { ExpensechartPage } from '../expensechart/expensechart';
+import { ChatbotPage } from '../chatbot/chatbot';
+import { StatementsPage } from '../statements/statements';
+import { StatementDetailsPage } from '../statement-details/statement-details';
 
 
 //import introJs from '../../assets/js/intro.js';
@@ -60,7 +64,7 @@ export class StartPage {
 
   }
   card() {
-    this.navCtrl.push("StatementsPage");
+    this.navCtrl.push(StatementsPage);
   }
   card1() {
     this.navCtrl.push("HeaderslidePage");
@@ -69,7 +73,7 @@ export class StartPage {
     this.navCtrl.push("SuccessPage");
   }
   public gotoExpenseChart() {
-    this.navCtrl.push("ExpensechartPage")
+    this.navCtrl.push(ExpensechartPage)
   }
 
   public gotoAccounts() {
@@ -89,7 +93,7 @@ export class StartPage {
   }
 
   public gotoStatementDetails() {
-    this.navCtrl.push("StatementDetailsPage");
+    this.navCtrl.push(StatementDetailsPage);
 
   }
 
@@ -104,7 +108,7 @@ export class StartPage {
 
 
   gotochatBot() {
-    this.navCtrl.push("ChatbotPage")
+    this.navCtrl.push(ChatbotPage)
   }
   public gotoLogin() {
 

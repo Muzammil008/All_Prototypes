@@ -30,6 +30,7 @@ import { Ng2OdometerModule } from 'ng2-odometer';
 import { ChatbotPage } from '../pages/chatbot/chatbot';
 import { ExpensechartPage } from '../pages/expensechart/expensechart';
 import { StatementsPage } from '../pages/statements/statements';
+import { StatementDetailsPage } from '../pages/statement-details/statement-details';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { StatementsPage } from '../pages/statements/statements';
     BubbleIconpagePage,
     ChatbotPage,
     ExpensechartPage,
-    StatementsPage
+    StatementsPage,
+    StatementDetailsPage
   ],
   imports: [
     BrowserModule,HttpModule,FormsModule,ScrollEventModule,NgQRCodeReaderModule,
@@ -69,7 +71,8 @@ import { StatementsPage } from '../pages/statements/statements';
     BubbleIconpagePage,
     ChatbotPage,
     ExpensechartPage,
-    StatementsPage
+    StatementsPage,
+    StatementDetailsPage
   ],
   providers: [
     StatusBar,
